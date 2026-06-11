@@ -1,0 +1,467 @@
+[
+  {
+    "id": "s1_c_destrutturato",
+    "title": "Piano di lavoro — prompt destrutturato",
+    "cat": "Workflow",
+    "text": "Crea un piano di lavoro per il lancio di un nuovo prodotto interno.",
+    "note": "Prompt demo: versione destrutturata da confrontare con la versione strutturata",
+    "source": "builder",
+    "builderParts": {
+      "task": "Crea un piano di lavoro per il lancio di un nuovo prodotto interno.",
+      "ctx": "",
+      "fmt": "",
+      "con": "",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s1_c_strutturato",
+    "title": "Piano di lavoro lancio software — prompt strutturato",
+    "cat": "Workflow",
+    "text": "Sei un consulente di project management con esperienza in PMI del settore manifatturiero.\n\nContesto: sono il responsabile marketing di un'azienda di 30 persone. Dobbiamo lanciare internamente un nuovo software gestionale. Il team coinvolto è composto da 4 persone (1 IT, 1 operations, 2 marketing). Il lancio è previsto tra 6 settimane. Il budget è limitato e non sono previste attività di comunicazione esterna.\n\nObiettivo: crea un piano di lavoro operativo.\n\nFormato richiesto: tabella con colonne Settimana · Obiettivo · Attività principali · Responsabile · Output atteso.\n\nVincoli: non includere attività strategiche o di alto livello. Mantieniti su azioni concrete e misurabili. Massimo 6 righe (una per settimana).",
+    "note": "Prompt demo: versione strutturata — confrontare con la versione destrutturata",
+    "source": "builder",
+    "builderParts": {
+      "task": "Crea un piano di lavoro operativo.",
+      "ctx": "Sei un consulente di project management con esperienza in PMI del settore manifatturiero. Sono il responsabile marketing di un'azienda di 30 persone. Dobbiamo lanciare internamente un nuovo software gestionale. Il team coinvolto è composto da 4 persone (1 IT, 1 operations, 2 marketing). Il lancio è previsto tra 6 settimane. Il budget è limitato e non sono previste attività di comunicazione esterna.",
+      "fmt": "Tabella con colonne Settimana · Obiettivo · Attività principali · Responsabile · Output atteso.",
+      "con": "Non includere attività strategiche o di alto livello. Mantieniti su azioni concrete e misurabili. Massimo 6 righe (una per settimana).",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s1_d_few_shot",
+    "title": "Oggetti email campagna marketing — few-shot",
+    "cat": "Comunicazione",
+    "text": "Scrivi oggetti email per campagne marketing nel nostro stile.\nEcco 3 esempi del nostro tono:\n1. \"Il tempo stringe: la tua offerta scade stanotte\"\n2. \"Abbiamo una cosa per te. Ma solo per questa settimana.\"\n3. \"Risultati concreti in 30 giorni — o ti rimborsiamo.\"\n\nOra scrivi 5 oggetti email per il lancio del nostro nuovo corso online sul prompt design.",
+    "note": "Pattern: Few-shot learning",
+    "source": "builder",
+    "builderParts": {
+      "task": "Scrivi 5 oggetti email per il lancio del nostro nuovo corso online sul prompt design.",
+      "ctx": "",
+      "fmt": "",
+      "con": "",
+      "ex": "1. \"Il tempo stringe: la tua offerta scade stanotte\"\n2. \"Abbiamo una cosa per te. Ma solo per questa settimana.\"\n3. \"Risultati concreti in 30 giorni — o ti rimborsiamo.\""
+    }
+  },
+  {
+    "id": "s1_d_chain_of_thought",
+    "title": "Esternalizzare o meno il servizio clienti — chain-of-thought",
+    "cat": "Analisi",
+    "text": "Devo decidere se esternalizzare il nostro servizio clienti o mantenerlo interno. Prima di darmi una raccomandazione, ragiona ad alta voce: elenca i fattori da considerare, poi analizza pro e contro di ciascuna opzione, poi concludi con una raccomandazione motivata.\n\nContesto: PMI di 25 persone, 200 clienti attivi, 15 richieste di supporto al giorno in media.",
+    "note": "Pattern: Chain-of-thought",
+    "source": "builder",
+    "builderParts": {
+      "task": "Decidi se esternalizzare il servizio clienti o mantenerlo interno. Prima di darmi una raccomandazione, ragiona ad alta voce: elenca i fattori da considerare, poi analizza pro e contro di ciascuna opzione, poi concludi con una raccomandazione motivata.",
+      "ctx": "PMI di 25 persone, 200 clienti attivi, 15 richieste di supporto al giorno in media.",
+      "fmt": "",
+      "con": "",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s1_d_role_playing",
+    "title": "Analisi piano di investimento — role-playing CFO",
+    "cat": "Analisi",
+    "text": "Sei un CFO con 20 anni di esperienza in aziende manifatturiere italiane di medie dimensioni. Ti presento il nostro piano di investimento per i prossimi 12 mesi. Analizzalo con occhio critico: cosa ti preoccupa? Quali rischi non stiamo considerando? Dove vedi le maggiori opportunità di ottimizzazione?\n\n[piano di investimento]",
+    "note": "Pattern: Role-playing. Sostituire [piano di investimento] con il documento reale.",
+    "source": "builder",
+    "builderParts": {
+      "task": "Analizza il piano di investimento con occhio critico: cosa ti preoccupa? Quali rischi non stiamo considerando? Dove vedi le maggiori opportunità di ottimizzazione?",
+      "ctx": "Sei un CFO con 20 anni di esperienza in aziende manifatturiere italiane di medie dimensioni.",
+      "fmt": "",
+      "con": "",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s1_d_constraint_based",
+    "title": "Proposta commerciale consulenza HR — constraint-based",
+    "cat": "Comunicazione",
+    "text": "Scrivi una proposta commerciale per un servizio di consulenza HR.\n\nVincoli obbligatori:\n- Massimo 300 parole\n- Non usare parole come \"sinergia\", \"ecosistema\", \"value proposition\"\n- Non elencare certificazioni o anni di esperienza\n- Inizia direttamente con il problema del cliente, non con la presentazione dell'azienda\n- Tono: diretto, concreto, senza retorica commerciale",
+    "note": "Pattern: Constraint-based",
+    "source": "builder",
+    "builderParts": {
+      "task": "Scrivi una proposta commerciale per un servizio di consulenza HR.",
+      "ctx": "",
+      "fmt": "",
+      "con": "Massimo 300 parole. Non usare parole come \"sinergia\", \"ecosistema\", \"value proposition\". Non elencare certificazioni o anni di esperienza. Inizia direttamente con il problema del cliente, non con la presentazione dell'azienda. Tono: diretto, concreto, senza retorica commerciale.",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s1_d_output_structuring",
+    "title": "Report feedback clienti — output structuring",
+    "cat": "Analisi",
+    "text": "Analizza i feedback dei clienti che ti allego e producimi un report strutturato esattamente così:\n\n## Sintesi esecutiva (max 3 righe)\n## Top 3 problemi segnalati (con frequenza e impatto stimato)\n## Top 3 elementi positivi\n## Raccomandazioni operative (max 5 punti, ciascuno con: azione · responsabile suggerito · priorità alta/media/bassa)\n## Prossimi passi (entro 30 giorni)\n\n[feedback clienti]",
+    "note": "Pattern: Output structuring. Sostituire [feedback clienti] con i dati reali.",
+    "source": "builder",
+    "builderParts": {
+      "task": "Analizza i feedback dei clienti che ti allego e producimi un report strutturato.",
+      "ctx": "",
+      "fmt": "## Sintesi esecutiva (max 3 righe)\n## Top 3 problemi segnalati (con frequenza e impatto stimato)\n## Top 3 elementi positivi\n## Raccomandazioni operative (max 5 punti, ciascuno con: azione · responsabile suggerito · priorità alta/media/bassa)\n## Prossimi passi (entro 30 giorni)",
+      "con": "",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s1_g_composer_v01",
+    "title": "Vibe coding — build Prompt Composer v0.1",
+    "cat": "Workflow",
+    "text": "Crea una web app in HTML, CSS e JavaScript vanilla — un singolo file che funziona aprendolo nel browser, senza installazioni.\n\nL'app si chiama \"Prompt Composer\" e ha due sezioni principali:\n\n1. COLLEZIONE: una lista di prompt salvati, ciascuno con: titolo, categoria (scegli tra: Analisi · Comunicazione · Creatività · Struttura · Workflow), testo del prompt, note opzionali. Deve essere possibile aggiungere nuovi prompt tramite un form semplice e visualizzarli in card.\n\n2. BUILDER: un form guidato che aiuta a costruire un prompt seguendo i 5 componenti: Task · Context · Format · Constraints · Examples. Ogni campo ha un placeholder esplicativo. Al termine, il builder assembla i componenti in un prompt completo che può essere copiato.\n\nDesign: pulito, professionale, sfondo bianco, accenti in arancione (#FF6B1A). Font leggibile. Nessuna dipendenza esterna.\n\nAggiungi un pulsante \"Copia prompt\" che copia il testo negli appunti.",
+    "note": "Prompt vibe coding sessione 1 — prima build del Prompt Composer",
+    "source": "builder",
+    "builderParts": {
+      "task": "Crea una web app chiamata Prompt Composer con due sezioni: Collezione (lista di prompt salvati con titolo, categoria, testo, note; aggiunta via form; visualizzazione in card) e Builder (form guidato sui 5 componenti Task · Context · Format · Constraints · Examples che assembla un prompt completo copiabile).",
+      "ctx": "",
+      "fmt": "Singolo file HTML che funziona aprendolo nel browser, senza installazioni.",
+      "con": "Nessuna dipendenza esterna. HTML, CSS e JavaScript vanilla. Aggiungi un pulsante \"Copia prompt\" che copia il testo negli appunti.",
+      "ex": "Design: pulito, professionale, sfondo bianco, accenti in arancione (#FF6B1A). Font leggibile."
+    }
+  },
+  {
+    "id": "s1_g_composer_iter1",
+    "title": "Vibe coding — iterazione Prompt Composer: filtri e pattern",
+    "cat": "Workflow",
+    "text": "Ottimo. Ora aggiungi queste funzionalità:\n\n1. Un filtro per categoria nella sezione Collezione\n2. Pre-carica 3 prompt di esempio nella collezione al primo avvio, uno per ciascuna categoria: Analisi, Comunicazione, Creatività\n3. Aggiungi al Builder una sezione finale che mostra quale dei 5 pattern fondamentali (Few-shot · Chain-of-thought · Role-playing · Constraint-based · Output structuring) è più adatto in base ai campi compilati\n\nMantieni tutto in un singolo file HTML.",
+    "note": "Prompt vibe coding sessione 1 — prima iterazione sul Prompt Composer v0.1",
+    "source": "builder",
+    "builderParts": {
+      "task": "Aggiungi al Prompt Composer: filtro per categoria nella Collezione; 3 prompt di esempio pre-caricati al primo avvio (uno per Analisi, Comunicazione, Creatività); sezione finale nel Builder che suggerisce il pattern fondamentale più adatto in base ai campi compilati.",
+      "ctx": "",
+      "fmt": "",
+      "con": "Mantieni tutto in un singolo file HTML.",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s2_a_questionario_base",
+    "title": "Analisi questionario soddisfazione — prompt generico",
+    "cat": "Analisi",
+    "text": "Abbiamo condotto un questionario di soddisfazione clienti (Q1 2026, 47 rispondenti su 200 contattati, settore B2B). I risultati sono allegati.\nAnalizza i dati e dimmi cosa emerge.",
+    "note": "Prompt demo sessione 2 — versione destrutturata da confrontare con le versioni corrette",
+    "source": "builder",
+    "builderParts": {
+      "task": "Analizza i dati del questionario e dimmi cosa emerge.",
+      "ctx": "Questionario di soddisfazione clienti, Q1 2026, 47 rispondenti su 200 contattati, settore B2B. Risultati allegati.",
+      "fmt": "",
+      "con": "",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s2_a_questionario_tabella",
+    "title": "Report soddisfazione clienti — tabella markdown con azioni",
+    "cat": "Analisi",
+    "text": "Abbiamo condotto un questionario di soddisfazione clienti (Q1 2026, 47 rispondenti su 200 contattati, settore B2B). I risultati sono allegati.\nAnalizza i dati e producimi un report nel seguente formato:\n\n| Area | Punteggio medio | Trend vs Q4 2025 | Priorità |\n|------|----------------|------------------|----------|\n\nPoi aggiungi una sezione \"Top 3 azioni immediate\" con:\n- Azione · Impatto stimato (alto/medio/basso) · Chi coinvolge\n\nTono: sintetico, operativo. Nessuna introduzione narrativa.\nMassimo 300 parole totali esclusa la tabella.",
+    "note": "Prompt demo sessione 2 — versione strutturata con tabella markdown",
+    "source": "builder",
+    "builderParts": {
+      "task": "Analizza i dati del questionario di soddisfazione clienti e producimi un report.",
+      "ctx": "Questionario di soddisfazione clienti, Q1 2026, 47 rispondenti su 200 contattati, settore B2B. Risultati allegati.",
+      "fmt": "Tabella: | Area | Punteggio medio | Trend vs Q4 2025 | Priorità |. Poi sezione \"Top 3 azioni immediate\" con: Azione · Impatto stimato (alto/medio/basso) · Chi coinvolge.",
+      "con": "Tono: sintetico, operativo. Nessuna introduzione narrativa. Massimo 300 parole totali esclusa la tabella.",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s2_a_questionario_html",
+    "title": "Report soddisfazione clienti — dashboard HTML completa",
+    "cat": "Struttura",
+    "text": "Abbiamo condotto un questionario di soddisfazione clienti (Q1 2026, 47 rispondenti su 200 contattati, settore B2B). I risultati sono allegati.\n\nAnalizza i dati e producimi un report in formato HTML da visualizzare nel browser. Il report deve essere un file HTML completo, con CSS inline, pronto per essere aperto direttamente.\n\nStruttura il report esattamente così:\n\n1. HEADER\n- Titolo: \"Customer Satisfaction Report — Q1 2026\"\n- Sottotitolo: \"Indagine B2B · 47 rispondenti su 200 contattati\"\n- 4 KPI card affiancate con sfondo colorato:\n  · Soddisfazione generale\n  · NPS score (con promotori e detrattori)\n  · Punto di forza\n  · Area critica\n\n2. DUE COLONNE AFFIANCATE\nSinistra — Rating per area: barra orizzontale colorata per ogni dimensione con punteggio, ordinata dal più alto al più basso.\nDestra — NPS per segmento: lista con PMI vs Enterprise e i 4 settori, con il valore NPS colorato (verde se positivo, rosso se negativo).\n\n3. DUE COLONNE DI SEGNALI DAI COMMENTI\nSinistra su sfondo verde chiaro — 3 segnali positivi.\nDestra su sfondo rosso chiaro — 3 segnali critici.\n\n4. TABELLA COMPARATIVA PER SETTORE\nColonne: Settore · Generale · Supporto · Tempi · Qualità · Prezzo.\nCon riga finale di media complessiva in grassetto.\nCelle con valori sotto la media colorate in rosso chiaro, sopra la media in verde chiaro.\n\n5. ANALISI NARRATIVA\nAlmeno 5 sezioni con titolo in grassetto e 3-4 righe di testo.\n\nDesign: sfondo bianco, font sans-serif, colori sobri e professionali.\nNessun JavaScript. Solo HTML e CSS inline.",
+    "note": "Prompt demo sessione 2 — versione avanzata con output HTML completo",
+    "source": "builder",
+    "builderParts": {
+      "task": "Analizza i dati del questionario di soddisfazione clienti e producimi un report in formato HTML da visualizzare nel browser.",
+      "ctx": "Questionario di soddisfazione clienti, Q1 2026, 47 rispondenti su 200 contattati, settore B2B. Risultati allegati.",
+      "fmt": "File HTML completo con CSS inline. Struttura: 1) Header con titolo, sottotitolo e 4 KPI card. 2) Due colonne: rating per area (barre orizzontali) e NPS per segmento. 3) Due colonne segnali dai commenti (verde/rosso). 4) Tabella comparativa per settore con colori condizionali. 5) Analisi narrativa in almeno 5 sezioni.",
+      "con": "Nessun JavaScript. Solo HTML e CSS inline. Design: sfondo bianco, font sans-serif, colori sobri e professionali.",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s2_b_formato_testo",
+    "title": "Vantaggi remote working — testo narrativo",
+    "cat": "Comunicazione",
+    "text": "Elenca i vantaggi del remote working per un team di 10 persone.\nRispondimi in forma di testo narrativo, 150 parole circa.",
+    "note": "Prompt demo formato: versione testo libero",
+    "source": "builder",
+    "builderParts": {
+      "task": "Elenca i vantaggi del remote working per un team di 10 persone.",
+      "ctx": "",
+      "fmt": "Testo narrativo, 150 parole circa.",
+      "con": "",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s2_b_formato_lista",
+    "title": "Vantaggi remote working — lista puntata",
+    "cat": "Comunicazione",
+    "text": "Elenca i vantaggi del remote working per un team di 10 persone.\nFormato: lista puntata. Massimo 8 punti, ognuno in una riga.\nNessuna introduzione.",
+    "note": "Prompt demo formato: versione lista",
+    "source": "builder",
+    "builderParts": {
+      "task": "Elenca i vantaggi del remote working per un team di 10 persone.",
+      "ctx": "",
+      "fmt": "Lista puntata. Massimo 8 punti, ognuno in una riga.",
+      "con": "Nessuna introduzione.",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s2_b_formato_tabella",
+    "title": "Vantaggi e svantaggi remote working — tabella",
+    "cat": "Analisi",
+    "text": "Elenca i vantaggi e gli svantaggi del remote working per un team di 10 persone.\n\nFormato tabella:\n| Dimensione | Vantaggio | Svantaggio | Impatto (alto/medio/basso) |\n\nMassimo 6 righe. Nessun testo fuori dalla tabella.",
+    "note": "Prompt demo formato: versione tabella",
+    "source": "builder",
+    "builderParts": {
+      "task": "Elenca i vantaggi e gli svantaggi del remote working per un team di 10 persone.",
+      "ctx": "",
+      "fmt": "Tabella: | Dimensione | Vantaggio | Svantaggio | Impatto (alto/medio/basso) |. Massimo 6 righe.",
+      "con": "Nessun testo fuori dalla tabella.",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s2_c_linkedin_vincoli",
+    "title": "Ricerca vincoli tecnici bio LinkedIn",
+    "cat": "Analisi",
+    "text": "Prima di scrivere la mia bio LinkedIn, ho bisogno di capire i vincoli tecnici della piattaforma.\n\nDimmi: qual è il limite di caratteri della sezione \"Info\"? Come viene troncata nella visualizzazione mobile? Quanti caratteri sono visibili prima del \"...leggi altro\"?",
+    "note": "Prompt di ricerca — primo step del loop iterativo per la bio LinkedIn",
+    "source": "builder",
+    "builderParts": {
+      "task": "Dimmi i vincoli tecnici della sezione Info di LinkedIn: limite di caratteri, troncamento nella visualizzazione mobile, caratteri visibili prima del \"...leggi altro\".",
+      "ctx": "Sto per scrivere la mia bio LinkedIn e ho bisogno di conoscere i vincoli tecnici della piattaforma prima di iniziare.",
+      "fmt": "",
+      "con": "",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s2_c_linkedin_benchmark",
+    "title": "Benchmark bio LinkedIn — settore consulenza HR",
+    "cat": "Analisi",
+    "text": "Sto scrivendo la mia bio LinkedIn. Lavoro nel settore della consulenza HR per PMI italiane.\n\nAnalizza il tono e la struttura delle bio LinkedIn più efficaci in questo settore. Cosa hanno in comune? Cosa evitano? Dammi 3 pattern concreti con esempi.",
+    "note": "Prompt di ricerca — secondo step del loop iterativo per la bio LinkedIn",
+    "source": "builder",
+    "builderParts": {
+      "task": "Analizza il tono e la struttura delle bio LinkedIn più efficaci nel settore consulenza HR per PMI italiane. Cosa hanno in comune? Cosa evitano? Dammi 3 pattern concreti con esempi.",
+      "ctx": "Sto scrivendo la mia bio LinkedIn. Lavoro nel settore della consulenza HR per PMI italiane.",
+      "fmt": "",
+      "con": "",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s2_c_tono_formale",
+    "title": "Comunicazione interna smart working — tono formale",
+    "cat": "Comunicazione",
+    "text": "Scrivi un annuncio interno per comunicare la nuova policy sullo smart working (massimo 2 giorni a settimana da remoto, valida dal 1 luglio 2026).\n\nMittente: Direzione Generale.\nDestinatari: tutti i dipendenti.\nTono: formale, istituzionale, neutro.\nStile: comunicato ufficiale.\n\nMassimo 150 parole.",
+    "note": "Prompt demo tono — versione formale istituzionale",
+    "source": "builder",
+    "builderParts": {
+      "task": "Scrivi un annuncio interno per comunicare la nuova policy sullo smart working (massimo 2 giorni a settimana da remoto, valida dal 1 luglio 2026).",
+      "ctx": "Mittente: Direzione Generale. Destinatari: tutti i dipendenti.",
+      "fmt": "Comunicato ufficiale.",
+      "con": "Tono: formale, istituzionale, neutro. Massimo 150 parole.",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s2_c_tono_diretto",
+    "title": "Comunicazione interna smart working — tono diretto",
+    "cat": "Comunicazione",
+    "text": "Scrivi un messaggio per comunicare al mio team la nuova policy sullo smart working (massimo 2 giorni a settimana da remoto, valida dal 1 luglio 2026).\n\nSono il loro manager diretto.\nTono: diretto, chiaro, senza giri di parole. Come parlerei a voce in una riunione veloce.\nNessuna retorica aziendale.\n\nMassimo 100 parole.",
+    "note": "Prompt demo tono — versione conversazionale diretta",
+    "source": "builder",
+    "builderParts": {
+      "task": "Scrivi un messaggio per comunicare al mio team la nuova policy sullo smart working (massimo 2 giorni a settimana da remoto, valida dal 1 luglio 2026).",
+      "ctx": "Sono il loro manager diretto.",
+      "fmt": "",
+      "con": "Tono: diretto, chiaro, senza giri di parole. Come parlerei a voce in una riunione veloce. Nessuna retorica aziendale. Massimo 100 parole.",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s2_c_tono_empatico",
+    "title": "Comunicazione interna smart working — tono empatico",
+    "cat": "Comunicazione",
+    "text": "Scrivi una comunicazione interna sulla nuova policy smart working (massimo 2 giorni remoto/settimana, dal 1 luglio 2026) pensata per chi questa policy la vivrà come un cambiamento difficile.\n\nTono: empatico, onesto, non paternalistico. Riconosci che il cambiamento può essere scomodo senza essere difensivo. Ispirati al tono di Patagonia nelle comunicazioni ai dipendenti.\n\nMassimo 200 parole.",
+    "note": "Prompt demo tono — versione narrativa empatica",
+    "source": "builder",
+    "builderParts": {
+      "task": "Scrivi una comunicazione interna sulla nuova policy smart working (massimo 2 giorni remoto/settimana, dal 1 luglio 2026) pensata per chi la vivrà come un cambiamento difficile.",
+      "ctx": "",
+      "fmt": "",
+      "con": "Tono: empatico, onesto, non paternalistico. Riconosci che il cambiamento può essere scomodo senza essere difensivo. Massimo 200 parole.",
+      "ex": "Ispirati al tono di Patagonia nelle comunicazioni ai dipendenti."
+    }
+  },
+  {
+    "id": "s2_e_composer_persistenza",
+    "title": "Vibe coding — Prompt Composer v0.2: localStorage ed export/import",
+    "cat": "Workflow",
+    "text": "Ho una web app HTML/CSS/JS — il Prompt Composer v0.1. Ti allego il codice completo.\n\nAggiungi queste due funzionalità di persistenza:\n\n1. SALVATAGGIO AUTOMATICO\nOgni volta che l'utente aggiunge un prompt alla Collezione, salvalo automaticamente nel localStorage del browser con la chiave \"promptComposer_collection\". Al caricamento della pagina, leggi il localStorage e ripristina la Collezione salvata. L'utente non deve fare nulla — il salvataggio è invisibile.\n\n2. EXPORT E IMPORT DELLA COLLEZIONE\nAggiungi due pulsanti nella sezione Collezione:\n\n- \"Esporta Collezione\": scarica un file chiamato \"prompt-composer-backup.json\" con tutti i prompt salvati. Il file deve essere leggibile — non codificato.\n\n- \"Importa Collezione\": apre un selettore di file. L'utente sceglie un file JSON precedentemente esportato. I prompt vengono aggiunti alla Collezione esistente (non sostituiti — aggiunti). Se un prompt è già presente, non duplicarlo.\n\nMantieni tutto in un singolo file HTML. Non rompere nulla di quello che funziona già. Testa mentalmente ogni modifica prima di scriverla.",
+    "note": "Prompt vibe coding sessione 2 — evoluzione verso il Prompt Composer v0.2",
+    "source": "builder",
+    "builderParts": {
+      "task": "Aggiungi al Prompt Composer v0.1 due funzionalità: salvataggio automatico nel localStorage e sistema di export/import della collezione in JSON.",
+      "ctx": "Ho una web app HTML/CSS/JS — il Prompt Composer v0.1. Il codice completo è allegato.",
+      "fmt": "",
+      "con": "Mantieni tutto in un singolo file HTML. Non rompere nulla di quello che funziona già. Testa mentalmente ogni modifica prima di scriverla.",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s2_f_deploy_check",
+    "title": "Controllo pre-deploy su Vercel",
+    "cat": "Workflow",
+    "text": "Ho un file HTML singolo — il Prompt Composer aggiornato. Devo caricarlo su Vercel come sito statico.\n\nControlla il codice e dimmi se c'è qualcosa che potrebbe creare problemi nel deploy su Vercel. Se tutto è a posto, confermamelo. Se c'è qualcosa da correggere, correggilo e dammi il file aggiornato.",
+    "note": "Prompt da eseguire prima del deploy in aula",
+    "source": "builder",
+    "builderParts": {
+      "task": "Controlla il codice del file HTML allegato e dimmi se c'è qualcosa che potrebbe creare problemi nel deploy su Vercel. Se tutto è a posto, confermamelo. Se c'è qualcosa da correggere, correggilo e dammi il file aggiornato.",
+      "ctx": "Ho un file HTML singolo — il Prompt Composer aggiornato. Devo caricarlo su Vercel come sito statico.",
+      "fmt": "",
+      "con": "",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s2_f_deploy_errore",
+    "title": "Risoluzione errore deploy Vercel",
+    "cat": "Workflow",
+    "text": "Durante il deploy su Vercel del mio file HTML statico ho ricevuto questo errore:\n\n[incolla qui l'errore]\n\nDimmi cosa è andato storto e come correggerlo.",
+    "note": "Prompt di emergenza — usare se qualcosa va storto durante il deploy in aula",
+    "source": "builder",
+    "builderParts": {
+      "task": "Dimmi cosa è andato storto e come correggerlo.",
+      "ctx": "Durante il deploy su Vercel del mio file HTML statico ho ricevuto questo errore: [incolla qui l'errore]",
+      "fmt": "",
+      "con": "",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s3_a_anchoring_basso",
+    "title": "Previsione commerciale Ferretti & C. — ancora bassa (3%)",
+    "cat": "Analisi",
+    "text": "Contesto: sono il direttore commerciale di Ferretti & C., una PMI di distribuzione B2B con 45 dipendenti e un fatturato 2024 di 3,2 milioni di euro.\n\nL'anno scorso il fatturato è cresciuto del 3% rispetto all'anno precedente.\n\nSulla base di questo trend, aiutami a costruire una previsione di crescita per il 2025 e a identificare 3 leve commerciali prioritarie su cui concentrarci.",
+    "note": "Prompt demo anchoring — versione con ancora bassa. Confrontare con la versione al 28%.",
+    "source": "builder",
+    "builderParts": {
+      "task": "Aiutami a costruire una previsione di crescita per il 2025 e a identificare 3 leve commerciali prioritarie su cui concentrarci.",
+      "ctx": "Sono il direttore commerciale di Ferretti & C., una PMI di distribuzione B2B con 45 dipendenti e un fatturato 2024 di 3,2 milioni di euro. L'anno scorso il fatturato è cresciuto del 3% rispetto all'anno precedente.",
+      "fmt": "",
+      "con": "",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s3_a_anchoring_alto",
+    "title": "Previsione commerciale Ferretti & C. — ancora alta (28%)",
+    "cat": "Analisi",
+    "text": "Contesto: sono il direttore commerciale di Ferretti & C., una PMI di distribuzione B2B con 45 dipendenti e un fatturato 2024 di 3,2 milioni di euro.\n\nL'anno scorso il fatturato è cresciuto del 28% rispetto all'anno precedente.\n\nSulla base di questo trend, aiutami a costruire una previsione di crescita per il 2025 e a identificare 3 leve commerciali prioritarie su cui concentrarci.",
+    "note": "Prompt demo anchoring — versione con ancora alta. Confrontare con la versione al 3%.",
+    "source": "builder",
+    "builderParts": {
+      "task": "Aiutami a costruire una previsione di crescita per il 2025 e a identificare 3 leve commerciali prioritarie su cui concentrarci.",
+      "ctx": "Sono il direttore commerciale di Ferretti & C., una PMI di distribuzione B2B con 45 dipendenti e un fatturato 2024 di 3,2 milioni di euro. L'anno scorso il fatturato è cresciuto del 28% rispetto all'anno precedente.",
+      "fmt": "",
+      "con": "",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s3_c_confirmation_conferma",
+    "title": "Valutazione servizio noleggio — prompt che conferma",
+    "cat": "Analisi",
+    "text": "Stiamo valutando di lanciare un nuovo servizio di noleggio a breve termine di attrezzature professionali per cantieri, in aggiunta alla nostra attività di distribuzione B2B.\n\nSiamo convinti che sia la mossa giusta: il mercato del noleggio è in crescita, i nostri clienti ce lo chiedono da tempo e abbiamo già i prodotti in magazzino.\n\nConferma che il nostro approccio sia corretto e dimmi come possiamo strutturare il lancio nel modo migliore.",
+    "note": "Prompt demo confirmation bias — versione che genera conferma. Confrontare con la versione C-2b.",
+    "source": "builder",
+    "builderParts": {
+      "task": "Conferma che il nostro approccio sia corretto e dimmi come possiamo strutturare il lancio nel modo migliore.",
+      "ctx": "Stiamo valutando di lanciare un nuovo servizio di noleggio a breve termine di attrezzature professionali per cantieri, in aggiunta alla nostra attività di distribuzione B2B. Siamo convinti che sia la mossa giusta: il mercato del noleggio è in crescita, i nostri clienti ce lo chiedono da tempo e abbiamo già i prodotti in magazzino.",
+      "fmt": "",
+      "con": "",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s3_c_confirmation_sfida",
+    "title": "Valutazione servizio noleggio — prompt che sfida le assunzioni",
+    "cat": "Analisi",
+    "text": "Stiamo valutando di lanciare un nuovo servizio di noleggio a breve termine di attrezzature professionali per cantieri, in aggiunta alla nostra attività di distribuzione B2B.\n\nPrima di dirmi se è un buon approccio, voglio che tu:\n1. Elenci le assunzioni implicite che stiamo facendo\n2. Identifichi i 3 rischi principali che potremmo star sottovalutando\n3. Ci dica cosa dovremmo verificare concretamente prima di procedere\n4. Solo dopo: esprimi una valutazione motivata\n\nNon cercare di rassicurarci — cerca di renderci più consapevoli.",
+    "note": "Prompt demo confirmation bias — versione che sfida le assunzioni. Confrontare con la versione C-2a.",
+    "source": "builder",
+    "builderParts": {
+      "task": "Prima di dirmi se lanciare il nuovo servizio di noleggio è un buon approccio, voglio che tu: 1) elenchi le assunzioni implicite che stiamo facendo; 2) identifichi i 3 rischi principali che potremmo star sottovalutando; 3) ci dica cosa dovremmo verificare concretamente prima di procedere; 4) solo dopo, esprimi una valutazione motivata.",
+      "ctx": "Stiamo valutando di lanciare un nuovo servizio di noleggio a breve termine di attrezzature professionali per cantieri, in aggiunta alla nostra attività di distribuzione B2B.",
+      "fmt": "",
+      "con": "Non cercare di rassicurarci — cerca di renderci più consapevoli.",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s3_c_availability_generico",
+    "title": "Esempi employer branding talenti tecnici — prompt generico",
+    "cat": "Analisi",
+    "text": "Dammi 3 esempi di aziende che hanno costruito una comunicazione efficace della propria cultura aziendale per attrarre talenti tecnici qualificati.",
+    "note": "Prompt demo availability heuristic — versione generica. Confrontare con la versione C-3b.",
+    "source": "builder",
+    "builderParts": {
+      "task": "Dammi 3 esempi di aziende che hanno costruito una comunicazione efficace della propria cultura aziendale per attrarre talenti tecnici qualificati.",
+      "ctx": "",
+      "fmt": "",
+      "con": "",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s3_c_availability_contestuale",
+    "title": "Esempi employer branding talenti tecnici — prompt con contesto PMI",
+    "cat": "Analisi",
+    "text": "Dammi 3 esempi di aziende che hanno costruito una comunicazione efficace della propria cultura aziendale per attrarre talenti tecnici qualificati.\n\nContesto: sono una PMI italiana di distribuzione B2B con 45 dipendenti, settore attrezzature professionali, operativa principalmente nel territorio del Nord-Est. I profili tecnici che cerchiamo sono: tecnici di prodotto, magazzinieri specializzati, commerciali con background tecnico.\n\nEvita esempi di grandi aziende tech internazionali — non sono replicabili nel nostro contesto e dimensione. Preferisci PMI italiane o europee di dimensioni simili. Se non esistono casi documentati con precisione, adatta i principi al nostro contesto dichiarando esplicitamente che stai ragionando per analogia, non citando casi reali come se fossero verificati.",
+    "note": "Prompt demo availability heuristic — versione con contesto specifico. Confrontare con la versione C-3a.",
+    "source": "builder",
+    "builderParts": {
+      "task": "Dammi 3 esempi di aziende che hanno costruito una comunicazione efficace della propria cultura aziendale per attrarre talenti tecnici qualificati.",
+      "ctx": "Sono una PMI italiana di distribuzione B2B con 45 dipendenti, settore attrezzature professionali, operativa principalmente nel territorio del Nord-Est. I profili tecnici che cerchiamo sono: tecnici di prodotto, magazzinieri specializzati, commerciali con background tecnico.",
+      "con": "Evita esempi di grandi aziende tech internazionali — non sono replicabili nel nostro contesto e dimensione. Preferisci PMI italiane o europee di dimensioni simili. Se non esistono casi documentati con precisione, adatta i principi al nostro contesto dichiarando esplicitamente che stai ragionando per analogia, non citando casi reali come se fossero verificati.",
+      "fmt": "",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s3_e_echo_chamber",
+    "title": "Valutazione espansione territoriale Ferretti & C. — echo chamber",
+    "cat": "Analisi",
+    "text": "Stiamo valutando di aprire un secondo punto operativo di Ferretti & C. in una nuova area geografica, per espandere la nostra copertura territoriale e intercettare nuovi clienti B2B.\n\nL'idea ci sembra solida: il mercato nella nuova area è attivo, abbiamo già qualche contatto commerciale lì e la struttura attuale regge bene.\n\nCosa ne pensi e come potremmo strutturare questa espansione nel modo migliore?",
+    "note": "Prompt demo anti-echo chamber — versione standard. Confrontare con la versione E-2.",
+    "source": "builder",
+    "builderParts": {
+      "task": "Cosa ne pensi dell'idea di aprire un secondo punto operativo e come potremmo strutturare questa espansione nel modo migliore?",
+      "ctx": "Stiamo valutando di aprire un secondo punto operativo di Ferretti & C. in una nuova area geografica, per espandere la nostra copertura territoriale e intercettare nuovi clienti B2B. L'idea ci sembra solida: il mercato nella nuova area è attivo, abbiamo già qualche contatto commerciale lì e la struttura attuale regge bene.",
+      "fmt": "",
+      "con": "",
+      "ex": ""
+    }
+  },
+  {
+    "id": "s3_e_anti_echo_chamber",
+    "title": "Valutazione espansione territoriale Ferretti & C. — anti-echo chamber",
+    "cat": "Analisi",
+    "text": "Stiamo valutando di aprire un secondo punto operativo di Ferretti & C. in una nuova area geografica, per espandere la nostra copertura territoriale e intercettare nuovi clienti B2B.\n\nPrima di darmi qualsiasi raccomandazione, voglio che tu faccia questo:\n\n1. Elenca le 5 assunzioni implicite che stiamo facendo in questa valutazione\n\n2. Identifica i 3 scenari in cui questa mossa si rivelerebbe un errore — non improbabile, ma plausibile\n\n3. Dimmi quali dati concreti dovremmo avere prima di decidere, che probabilmente non abbiamo ancora\n\n4. Solo dopo: esprimi una valutazione motivata e bilanciata\n\nRegola: non cercare di farci sentire meglio. Cerca di farci decidere meglio.",
+    "note": "Prompt demo anti-echo chamber — versione critica. Confrontare con la versione E-1.",
+    "source": "builder",
+    "builderParts": {
+      "task": "Prima di darmi qualsiasi raccomandazione, voglio che tu: 1) elenchi le 5 assunzioni implicite che stiamo facendo; 2) identifichi i 3 scenari in cui questa mossa si rivelerebbe un errore plausibile; 3) mi dica quali dati concreti dovremmo avere prima di decidere; 4) solo dopo, esprima una valutazione motivata e bilanciata.",
+      "ctx": "Stiamo valutando di aprire un secondo punto operativo di Ferretti & C. in una nuova area geografica, per espandere la nostra copertura territoriale e intercettare nuovi clienti B2B.",
+      "fmt": "",
+      "con": "Non cercare di farci sentire meglio. Cerca di farci decidere meglio.",
+      "ex": ""
+    }
+  }
+]
