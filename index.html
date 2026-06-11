@@ -1,467 +1,1042 @@
-[
-  {
-    "id": "s1_c_destrutturato",
-    "title": "Piano di lavoro — prompt destrutturato",
-    "cat": "Workflow",
-    "text": "Crea un piano di lavoro per il lancio di un nuovo prodotto interno.",
-    "note": "Prompt demo: versione destrutturata da confrontare con la versione strutturata",
-    "source": "builder",
-    "builderParts": {
-      "task": "Crea un piano di lavoro per il lancio di un nuovo prodotto interno.",
-      "ctx": "",
-      "fmt": "",
-      "con": "",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s1_c_strutturato",
-    "title": "Piano di lavoro lancio software — prompt strutturato",
-    "cat": "Workflow",
-    "text": "Sei un consulente di project management con esperienza in PMI del settore manifatturiero.\n\nContesto: sono il responsabile marketing di un'azienda di 30 persone. Dobbiamo lanciare internamente un nuovo software gestionale. Il team coinvolto è composto da 4 persone (1 IT, 1 operations, 2 marketing). Il lancio è previsto tra 6 settimane. Il budget è limitato e non sono previste attività di comunicazione esterna.\n\nObiettivo: crea un piano di lavoro operativo.\n\nFormato richiesto: tabella con colonne Settimana · Obiettivo · Attività principali · Responsabile · Output atteso.\n\nVincoli: non includere attività strategiche o di alto livello. Mantieniti su azioni concrete e misurabili. Massimo 6 righe (una per settimana).",
-    "note": "Prompt demo: versione strutturata — confrontare con la versione destrutturata",
-    "source": "builder",
-    "builderParts": {
-      "task": "Crea un piano di lavoro operativo.",
-      "ctx": "Sei un consulente di project management con esperienza in PMI del settore manifatturiero. Sono il responsabile marketing di un'azienda di 30 persone. Dobbiamo lanciare internamente un nuovo software gestionale. Il team coinvolto è composto da 4 persone (1 IT, 1 operations, 2 marketing). Il lancio è previsto tra 6 settimane. Il budget è limitato e non sono previste attività di comunicazione esterna.",
-      "fmt": "Tabella con colonne Settimana · Obiettivo · Attività principali · Responsabile · Output atteso.",
-      "con": "Non includere attività strategiche o di alto livello. Mantieniti su azioni concrete e misurabili. Massimo 6 righe (una per settimana).",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s1_d_few_shot",
-    "title": "Oggetti email campagna marketing — few-shot",
-    "cat": "Comunicazione",
-    "text": "Scrivi oggetti email per campagne marketing nel nostro stile.\nEcco 3 esempi del nostro tono:\n1. \"Il tempo stringe: la tua offerta scade stanotte\"\n2. \"Abbiamo una cosa per te. Ma solo per questa settimana.\"\n3. \"Risultati concreti in 30 giorni — o ti rimborsiamo.\"\n\nOra scrivi 5 oggetti email per il lancio del nostro nuovo corso online sul prompt design.",
-    "note": "Pattern: Few-shot learning",
-    "source": "builder",
-    "builderParts": {
-      "task": "Scrivi 5 oggetti email per il lancio del nostro nuovo corso online sul prompt design.",
-      "ctx": "",
-      "fmt": "",
-      "con": "",
-      "ex": "1. \"Il tempo stringe: la tua offerta scade stanotte\"\n2. \"Abbiamo una cosa per te. Ma solo per questa settimana.\"\n3. \"Risultati concreti in 30 giorni — o ti rimborsiamo.\""
-    }
-  },
-  {
-    "id": "s1_d_chain_of_thought",
-    "title": "Esternalizzare o meno il servizio clienti — chain-of-thought",
-    "cat": "Analisi",
-    "text": "Devo decidere se esternalizzare il nostro servizio clienti o mantenerlo interno. Prima di darmi una raccomandazione, ragiona ad alta voce: elenca i fattori da considerare, poi analizza pro e contro di ciascuna opzione, poi concludi con una raccomandazione motivata.\n\nContesto: PMI di 25 persone, 200 clienti attivi, 15 richieste di supporto al giorno in media.",
-    "note": "Pattern: Chain-of-thought",
-    "source": "builder",
-    "builderParts": {
-      "task": "Decidi se esternalizzare il servizio clienti o mantenerlo interno. Prima di darmi una raccomandazione, ragiona ad alta voce: elenca i fattori da considerare, poi analizza pro e contro di ciascuna opzione, poi concludi con una raccomandazione motivata.",
-      "ctx": "PMI di 25 persone, 200 clienti attivi, 15 richieste di supporto al giorno in media.",
-      "fmt": "",
-      "con": "",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s1_d_role_playing",
-    "title": "Analisi piano di investimento — role-playing CFO",
-    "cat": "Analisi",
-    "text": "Sei un CFO con 20 anni di esperienza in aziende manifatturiere italiane di medie dimensioni. Ti presento il nostro piano di investimento per i prossimi 12 mesi. Analizzalo con occhio critico: cosa ti preoccupa? Quali rischi non stiamo considerando? Dove vedi le maggiori opportunità di ottimizzazione?\n\n[piano di investimento]",
-    "note": "Pattern: Role-playing. Sostituire [piano di investimento] con il documento reale.",
-    "source": "builder",
-    "builderParts": {
-      "task": "Analizza il piano di investimento con occhio critico: cosa ti preoccupa? Quali rischi non stiamo considerando? Dove vedi le maggiori opportunità di ottimizzazione?",
-      "ctx": "Sei un CFO con 20 anni di esperienza in aziende manifatturiere italiane di medie dimensioni.",
-      "fmt": "",
-      "con": "",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s1_d_constraint_based",
-    "title": "Proposta commerciale consulenza HR — constraint-based",
-    "cat": "Comunicazione",
-    "text": "Scrivi una proposta commerciale per un servizio di consulenza HR.\n\nVincoli obbligatori:\n- Massimo 300 parole\n- Non usare parole come \"sinergia\", \"ecosistema\", \"value proposition\"\n- Non elencare certificazioni o anni di esperienza\n- Inizia direttamente con il problema del cliente, non con la presentazione dell'azienda\n- Tono: diretto, concreto, senza retorica commerciale",
-    "note": "Pattern: Constraint-based",
-    "source": "builder",
-    "builderParts": {
-      "task": "Scrivi una proposta commerciale per un servizio di consulenza HR.",
-      "ctx": "",
-      "fmt": "",
-      "con": "Massimo 300 parole. Non usare parole come \"sinergia\", \"ecosistema\", \"value proposition\". Non elencare certificazioni o anni di esperienza. Inizia direttamente con il problema del cliente, non con la presentazione dell'azienda. Tono: diretto, concreto, senza retorica commerciale.",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s1_d_output_structuring",
-    "title": "Report feedback clienti — output structuring",
-    "cat": "Analisi",
-    "text": "Analizza i feedback dei clienti che ti allego e producimi un report strutturato esattamente così:\n\n## Sintesi esecutiva (max 3 righe)\n## Top 3 problemi segnalati (con frequenza e impatto stimato)\n## Top 3 elementi positivi\n## Raccomandazioni operative (max 5 punti, ciascuno con: azione · responsabile suggerito · priorità alta/media/bassa)\n## Prossimi passi (entro 30 giorni)\n\n[feedback clienti]",
-    "note": "Pattern: Output structuring. Sostituire [feedback clienti] con i dati reali.",
-    "source": "builder",
-    "builderParts": {
-      "task": "Analizza i feedback dei clienti che ti allego e producimi un report strutturato.",
-      "ctx": "",
-      "fmt": "## Sintesi esecutiva (max 3 righe)\n## Top 3 problemi segnalati (con frequenza e impatto stimato)\n## Top 3 elementi positivi\n## Raccomandazioni operative (max 5 punti, ciascuno con: azione · responsabile suggerito · priorità alta/media/bassa)\n## Prossimi passi (entro 30 giorni)",
-      "con": "",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s1_g_composer_v01",
-    "title": "Vibe coding — build Prompt Composer v0.1",
-    "cat": "Workflow",
-    "text": "Crea una web app in HTML, CSS e JavaScript vanilla — un singolo file che funziona aprendolo nel browser, senza installazioni.\n\nL'app si chiama \"Prompt Composer\" e ha due sezioni principali:\n\n1. COLLEZIONE: una lista di prompt salvati, ciascuno con: titolo, categoria (scegli tra: Analisi · Comunicazione · Creatività · Struttura · Workflow), testo del prompt, note opzionali. Deve essere possibile aggiungere nuovi prompt tramite un form semplice e visualizzarli in card.\n\n2. BUILDER: un form guidato che aiuta a costruire un prompt seguendo i 5 componenti: Task · Context · Format · Constraints · Examples. Ogni campo ha un placeholder esplicativo. Al termine, il builder assembla i componenti in un prompt completo che può essere copiato.\n\nDesign: pulito, professionale, sfondo bianco, accenti in arancione (#FF6B1A). Font leggibile. Nessuna dipendenza esterna.\n\nAggiungi un pulsante \"Copia prompt\" che copia il testo negli appunti.",
-    "note": "Prompt vibe coding sessione 1 — prima build del Prompt Composer",
-    "source": "builder",
-    "builderParts": {
-      "task": "Crea una web app chiamata Prompt Composer con due sezioni: Collezione (lista di prompt salvati con titolo, categoria, testo, note; aggiunta via form; visualizzazione in card) e Builder (form guidato sui 5 componenti Task · Context · Format · Constraints · Examples che assembla un prompt completo copiabile).",
-      "ctx": "",
-      "fmt": "Singolo file HTML che funziona aprendolo nel browser, senza installazioni.",
-      "con": "Nessuna dipendenza esterna. HTML, CSS e JavaScript vanilla. Aggiungi un pulsante \"Copia prompt\" che copia il testo negli appunti.",
-      "ex": "Design: pulito, professionale, sfondo bianco, accenti in arancione (#FF6B1A). Font leggibile."
-    }
-  },
-  {
-    "id": "s1_g_composer_iter1",
-    "title": "Vibe coding — iterazione Prompt Composer: filtri e pattern",
-    "cat": "Workflow",
-    "text": "Ottimo. Ora aggiungi queste funzionalità:\n\n1. Un filtro per categoria nella sezione Collezione\n2. Pre-carica 3 prompt di esempio nella collezione al primo avvio, uno per ciascuna categoria: Analisi, Comunicazione, Creatività\n3. Aggiungi al Builder una sezione finale che mostra quale dei 5 pattern fondamentali (Few-shot · Chain-of-thought · Role-playing · Constraint-based · Output structuring) è più adatto in base ai campi compilati\n\nMantieni tutto in un singolo file HTML.",
-    "note": "Prompt vibe coding sessione 1 — prima iterazione sul Prompt Composer v0.1",
-    "source": "builder",
-    "builderParts": {
-      "task": "Aggiungi al Prompt Composer: filtro per categoria nella Collezione; 3 prompt di esempio pre-caricati al primo avvio (uno per Analisi, Comunicazione, Creatività); sezione finale nel Builder che suggerisce il pattern fondamentale più adatto in base ai campi compilati.",
-      "ctx": "",
-      "fmt": "",
-      "con": "Mantieni tutto in un singolo file HTML.",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s2_a_questionario_base",
-    "title": "Analisi questionario soddisfazione — prompt generico",
-    "cat": "Analisi",
-    "text": "Abbiamo condotto un questionario di soddisfazione clienti (Q1 2026, 47 rispondenti su 200 contattati, settore B2B). I risultati sono allegati.\nAnalizza i dati e dimmi cosa emerge.",
-    "note": "Prompt demo sessione 2 — versione destrutturata da confrontare con le versioni corrette",
-    "source": "builder",
-    "builderParts": {
-      "task": "Analizza i dati del questionario e dimmi cosa emerge.",
-      "ctx": "Questionario di soddisfazione clienti, Q1 2026, 47 rispondenti su 200 contattati, settore B2B. Risultati allegati.",
-      "fmt": "",
-      "con": "",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s2_a_questionario_tabella",
-    "title": "Report soddisfazione clienti — tabella markdown con azioni",
-    "cat": "Analisi",
-    "text": "Abbiamo condotto un questionario di soddisfazione clienti (Q1 2026, 47 rispondenti su 200 contattati, settore B2B). I risultati sono allegati.\nAnalizza i dati e producimi un report nel seguente formato:\n\n| Area | Punteggio medio | Trend vs Q4 2025 | Priorità |\n|------|----------------|------------------|----------|\n\nPoi aggiungi una sezione \"Top 3 azioni immediate\" con:\n- Azione · Impatto stimato (alto/medio/basso) · Chi coinvolge\n\nTono: sintetico, operativo. Nessuna introduzione narrativa.\nMassimo 300 parole totali esclusa la tabella.",
-    "note": "Prompt demo sessione 2 — versione strutturata con tabella markdown",
-    "source": "builder",
-    "builderParts": {
-      "task": "Analizza i dati del questionario di soddisfazione clienti e producimi un report.",
-      "ctx": "Questionario di soddisfazione clienti, Q1 2026, 47 rispondenti su 200 contattati, settore B2B. Risultati allegati.",
-      "fmt": "Tabella: | Area | Punteggio medio | Trend vs Q4 2025 | Priorità |. Poi sezione \"Top 3 azioni immediate\" con: Azione · Impatto stimato (alto/medio/basso) · Chi coinvolge.",
-      "con": "Tono: sintetico, operativo. Nessuna introduzione narrativa. Massimo 300 parole totali esclusa la tabella.",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s2_a_questionario_html",
-    "title": "Report soddisfazione clienti — dashboard HTML completa",
-    "cat": "Struttura",
-    "text": "Abbiamo condotto un questionario di soddisfazione clienti (Q1 2026, 47 rispondenti su 200 contattati, settore B2B). I risultati sono allegati.\n\nAnalizza i dati e producimi un report in formato HTML da visualizzare nel browser. Il report deve essere un file HTML completo, con CSS inline, pronto per essere aperto direttamente.\n\nStruttura il report esattamente così:\n\n1. HEADER\n- Titolo: \"Customer Satisfaction Report — Q1 2026\"\n- Sottotitolo: \"Indagine B2B · 47 rispondenti su 200 contattati\"\n- 4 KPI card affiancate con sfondo colorato:\n  · Soddisfazione generale\n  · NPS score (con promotori e detrattori)\n  · Punto di forza\n  · Area critica\n\n2. DUE COLONNE AFFIANCATE\nSinistra — Rating per area: barra orizzontale colorata per ogni dimensione con punteggio, ordinata dal più alto al più basso.\nDestra — NPS per segmento: lista con PMI vs Enterprise e i 4 settori, con il valore NPS colorato (verde se positivo, rosso se negativo).\n\n3. DUE COLONNE DI SEGNALI DAI COMMENTI\nSinistra su sfondo verde chiaro — 3 segnali positivi.\nDestra su sfondo rosso chiaro — 3 segnali critici.\n\n4. TABELLA COMPARATIVA PER SETTORE\nColonne: Settore · Generale · Supporto · Tempi · Qualità · Prezzo.\nCon riga finale di media complessiva in grassetto.\nCelle con valori sotto la media colorate in rosso chiaro, sopra la media in verde chiaro.\n\n5. ANALISI NARRATIVA\nAlmeno 5 sezioni con titolo in grassetto e 3-4 righe di testo.\n\nDesign: sfondo bianco, font sans-serif, colori sobri e professionali.\nNessun JavaScript. Solo HTML e CSS inline.",
-    "note": "Prompt demo sessione 2 — versione avanzata con output HTML completo",
-    "source": "builder",
-    "builderParts": {
-      "task": "Analizza i dati del questionario di soddisfazione clienti e producimi un report in formato HTML da visualizzare nel browser.",
-      "ctx": "Questionario di soddisfazione clienti, Q1 2026, 47 rispondenti su 200 contattati, settore B2B. Risultati allegati.",
-      "fmt": "File HTML completo con CSS inline. Struttura: 1) Header con titolo, sottotitolo e 4 KPI card. 2) Due colonne: rating per area (barre orizzontali) e NPS per segmento. 3) Due colonne segnali dai commenti (verde/rosso). 4) Tabella comparativa per settore con colori condizionali. 5) Analisi narrativa in almeno 5 sezioni.",
-      "con": "Nessun JavaScript. Solo HTML e CSS inline. Design: sfondo bianco, font sans-serif, colori sobri e professionali.",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s2_b_formato_testo",
-    "title": "Vantaggi remote working — testo narrativo",
-    "cat": "Comunicazione",
-    "text": "Elenca i vantaggi del remote working per un team di 10 persone.\nRispondimi in forma di testo narrativo, 150 parole circa.",
-    "note": "Prompt demo formato: versione testo libero",
-    "source": "builder",
-    "builderParts": {
-      "task": "Elenca i vantaggi del remote working per un team di 10 persone.",
-      "ctx": "",
-      "fmt": "Testo narrativo, 150 parole circa.",
-      "con": "",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s2_b_formato_lista",
-    "title": "Vantaggi remote working — lista puntata",
-    "cat": "Comunicazione",
-    "text": "Elenca i vantaggi del remote working per un team di 10 persone.\nFormato: lista puntata. Massimo 8 punti, ognuno in una riga.\nNessuna introduzione.",
-    "note": "Prompt demo formato: versione lista",
-    "source": "builder",
-    "builderParts": {
-      "task": "Elenca i vantaggi del remote working per un team di 10 persone.",
-      "ctx": "",
-      "fmt": "Lista puntata. Massimo 8 punti, ognuno in una riga.",
-      "con": "Nessuna introduzione.",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s2_b_formato_tabella",
-    "title": "Vantaggi e svantaggi remote working — tabella",
-    "cat": "Analisi",
-    "text": "Elenca i vantaggi e gli svantaggi del remote working per un team di 10 persone.\n\nFormato tabella:\n| Dimensione | Vantaggio | Svantaggio | Impatto (alto/medio/basso) |\n\nMassimo 6 righe. Nessun testo fuori dalla tabella.",
-    "note": "Prompt demo formato: versione tabella",
-    "source": "builder",
-    "builderParts": {
-      "task": "Elenca i vantaggi e gli svantaggi del remote working per un team di 10 persone.",
-      "ctx": "",
-      "fmt": "Tabella: | Dimensione | Vantaggio | Svantaggio | Impatto (alto/medio/basso) |. Massimo 6 righe.",
-      "con": "Nessun testo fuori dalla tabella.",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s2_c_linkedin_vincoli",
-    "title": "Ricerca vincoli tecnici bio LinkedIn",
-    "cat": "Analisi",
-    "text": "Prima di scrivere la mia bio LinkedIn, ho bisogno di capire i vincoli tecnici della piattaforma.\n\nDimmi: qual è il limite di caratteri della sezione \"Info\"? Come viene troncata nella visualizzazione mobile? Quanti caratteri sono visibili prima del \"...leggi altro\"?",
-    "note": "Prompt di ricerca — primo step del loop iterativo per la bio LinkedIn",
-    "source": "builder",
-    "builderParts": {
-      "task": "Dimmi i vincoli tecnici della sezione Info di LinkedIn: limite di caratteri, troncamento nella visualizzazione mobile, caratteri visibili prima del \"...leggi altro\".",
-      "ctx": "Sto per scrivere la mia bio LinkedIn e ho bisogno di conoscere i vincoli tecnici della piattaforma prima di iniziare.",
-      "fmt": "",
-      "con": "",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s2_c_linkedin_benchmark",
-    "title": "Benchmark bio LinkedIn — settore consulenza HR",
-    "cat": "Analisi",
-    "text": "Sto scrivendo la mia bio LinkedIn. Lavoro nel settore della consulenza HR per PMI italiane.\n\nAnalizza il tono e la struttura delle bio LinkedIn più efficaci in questo settore. Cosa hanno in comune? Cosa evitano? Dammi 3 pattern concreti con esempi.",
-    "note": "Prompt di ricerca — secondo step del loop iterativo per la bio LinkedIn",
-    "source": "builder",
-    "builderParts": {
-      "task": "Analizza il tono e la struttura delle bio LinkedIn più efficaci nel settore consulenza HR per PMI italiane. Cosa hanno in comune? Cosa evitano? Dammi 3 pattern concreti con esempi.",
-      "ctx": "Sto scrivendo la mia bio LinkedIn. Lavoro nel settore della consulenza HR per PMI italiane.",
-      "fmt": "",
-      "con": "",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s2_c_tono_formale",
-    "title": "Comunicazione interna smart working — tono formale",
-    "cat": "Comunicazione",
-    "text": "Scrivi un annuncio interno per comunicare la nuova policy sullo smart working (massimo 2 giorni a settimana da remoto, valida dal 1 luglio 2026).\n\nMittente: Direzione Generale.\nDestinatari: tutti i dipendenti.\nTono: formale, istituzionale, neutro.\nStile: comunicato ufficiale.\n\nMassimo 150 parole.",
-    "note": "Prompt demo tono — versione formale istituzionale",
-    "source": "builder",
-    "builderParts": {
-      "task": "Scrivi un annuncio interno per comunicare la nuova policy sullo smart working (massimo 2 giorni a settimana da remoto, valida dal 1 luglio 2026).",
-      "ctx": "Mittente: Direzione Generale. Destinatari: tutti i dipendenti.",
-      "fmt": "Comunicato ufficiale.",
-      "con": "Tono: formale, istituzionale, neutro. Massimo 150 parole.",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s2_c_tono_diretto",
-    "title": "Comunicazione interna smart working — tono diretto",
-    "cat": "Comunicazione",
-    "text": "Scrivi un messaggio per comunicare al mio team la nuova policy sullo smart working (massimo 2 giorni a settimana da remoto, valida dal 1 luglio 2026).\n\nSono il loro manager diretto.\nTono: diretto, chiaro, senza giri di parole. Come parlerei a voce in una riunione veloce.\nNessuna retorica aziendale.\n\nMassimo 100 parole.",
-    "note": "Prompt demo tono — versione conversazionale diretta",
-    "source": "builder",
-    "builderParts": {
-      "task": "Scrivi un messaggio per comunicare al mio team la nuova policy sullo smart working (massimo 2 giorni a settimana da remoto, valida dal 1 luglio 2026).",
-      "ctx": "Sono il loro manager diretto.",
-      "fmt": "",
-      "con": "Tono: diretto, chiaro, senza giri di parole. Come parlerei a voce in una riunione veloce. Nessuna retorica aziendale. Massimo 100 parole.",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s2_c_tono_empatico",
-    "title": "Comunicazione interna smart working — tono empatico",
-    "cat": "Comunicazione",
-    "text": "Scrivi una comunicazione interna sulla nuova policy smart working (massimo 2 giorni remoto/settimana, dal 1 luglio 2026) pensata per chi questa policy la vivrà come un cambiamento difficile.\n\nTono: empatico, onesto, non paternalistico. Riconosci che il cambiamento può essere scomodo senza essere difensivo. Ispirati al tono di Patagonia nelle comunicazioni ai dipendenti.\n\nMassimo 200 parole.",
-    "note": "Prompt demo tono — versione narrativa empatica",
-    "source": "builder",
-    "builderParts": {
-      "task": "Scrivi una comunicazione interna sulla nuova policy smart working (massimo 2 giorni remoto/settimana, dal 1 luglio 2026) pensata per chi la vivrà come un cambiamento difficile.",
-      "ctx": "",
-      "fmt": "",
-      "con": "Tono: empatico, onesto, non paternalistico. Riconosci che il cambiamento può essere scomodo senza essere difensivo. Massimo 200 parole.",
-      "ex": "Ispirati al tono di Patagonia nelle comunicazioni ai dipendenti."
-    }
-  },
-  {
-    "id": "s2_e_composer_persistenza",
-    "title": "Vibe coding — Prompt Composer v0.2: localStorage ed export/import",
-    "cat": "Workflow",
-    "text": "Ho una web app HTML/CSS/JS — il Prompt Composer v0.1. Ti allego il codice completo.\n\nAggiungi queste due funzionalità di persistenza:\n\n1. SALVATAGGIO AUTOMATICO\nOgni volta che l'utente aggiunge un prompt alla Collezione, salvalo automaticamente nel localStorage del browser con la chiave \"promptComposer_collection\". Al caricamento della pagina, leggi il localStorage e ripristina la Collezione salvata. L'utente non deve fare nulla — il salvataggio è invisibile.\n\n2. EXPORT E IMPORT DELLA COLLEZIONE\nAggiungi due pulsanti nella sezione Collezione:\n\n- \"Esporta Collezione\": scarica un file chiamato \"prompt-composer-backup.json\" con tutti i prompt salvati. Il file deve essere leggibile — non codificato.\n\n- \"Importa Collezione\": apre un selettore di file. L'utente sceglie un file JSON precedentemente esportato. I prompt vengono aggiunti alla Collezione esistente (non sostituiti — aggiunti). Se un prompt è già presente, non duplicarlo.\n\nMantieni tutto in un singolo file HTML. Non rompere nulla di quello che funziona già. Testa mentalmente ogni modifica prima di scriverla.",
-    "note": "Prompt vibe coding sessione 2 — evoluzione verso il Prompt Composer v0.2",
-    "source": "builder",
-    "builderParts": {
-      "task": "Aggiungi al Prompt Composer v0.1 due funzionalità: salvataggio automatico nel localStorage e sistema di export/import della collezione in JSON.",
-      "ctx": "Ho una web app HTML/CSS/JS — il Prompt Composer v0.1. Il codice completo è allegato.",
-      "fmt": "",
-      "con": "Mantieni tutto in un singolo file HTML. Non rompere nulla di quello che funziona già. Testa mentalmente ogni modifica prima di scriverla.",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s2_f_deploy_check",
-    "title": "Controllo pre-deploy su Vercel",
-    "cat": "Workflow",
-    "text": "Ho un file HTML singolo — il Prompt Composer aggiornato. Devo caricarlo su Vercel come sito statico.\n\nControlla il codice e dimmi se c'è qualcosa che potrebbe creare problemi nel deploy su Vercel. Se tutto è a posto, confermamelo. Se c'è qualcosa da correggere, correggilo e dammi il file aggiornato.",
-    "note": "Prompt da eseguire prima del deploy in aula",
-    "source": "builder",
-    "builderParts": {
-      "task": "Controlla il codice del file HTML allegato e dimmi se c'è qualcosa che potrebbe creare problemi nel deploy su Vercel. Se tutto è a posto, confermamelo. Se c'è qualcosa da correggere, correggilo e dammi il file aggiornato.",
-      "ctx": "Ho un file HTML singolo — il Prompt Composer aggiornato. Devo caricarlo su Vercel come sito statico.",
-      "fmt": "",
-      "con": "",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s2_f_deploy_errore",
-    "title": "Risoluzione errore deploy Vercel",
-    "cat": "Workflow",
-    "text": "Durante il deploy su Vercel del mio file HTML statico ho ricevuto questo errore:\n\n[incolla qui l'errore]\n\nDimmi cosa è andato storto e come correggerlo.",
-    "note": "Prompt di emergenza — usare se qualcosa va storto durante il deploy in aula",
-    "source": "builder",
-    "builderParts": {
-      "task": "Dimmi cosa è andato storto e come correggerlo.",
-      "ctx": "Durante il deploy su Vercel del mio file HTML statico ho ricevuto questo errore: [incolla qui l'errore]",
-      "fmt": "",
-      "con": "",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s3_a_anchoring_basso",
-    "title": "Previsione commerciale Ferretti & C. — ancora bassa (3%)",
-    "cat": "Analisi",
-    "text": "Contesto: sono il direttore commerciale di Ferretti & C., una PMI di distribuzione B2B con 45 dipendenti e un fatturato 2024 di 3,2 milioni di euro.\n\nL'anno scorso il fatturato è cresciuto del 3% rispetto all'anno precedente.\n\nSulla base di questo trend, aiutami a costruire una previsione di crescita per il 2025 e a identificare 3 leve commerciali prioritarie su cui concentrarci.",
-    "note": "Prompt demo anchoring — versione con ancora bassa. Confrontare con la versione al 28%.",
-    "source": "builder",
-    "builderParts": {
-      "task": "Aiutami a costruire una previsione di crescita per il 2025 e a identificare 3 leve commerciali prioritarie su cui concentrarci.",
-      "ctx": "Sono il direttore commerciale di Ferretti & C., una PMI di distribuzione B2B con 45 dipendenti e un fatturato 2024 di 3,2 milioni di euro. L'anno scorso il fatturato è cresciuto del 3% rispetto all'anno precedente.",
-      "fmt": "",
-      "con": "",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s3_a_anchoring_alto",
-    "title": "Previsione commerciale Ferretti & C. — ancora alta (28%)",
-    "cat": "Analisi",
-    "text": "Contesto: sono il direttore commerciale di Ferretti & C., una PMI di distribuzione B2B con 45 dipendenti e un fatturato 2024 di 3,2 milioni di euro.\n\nL'anno scorso il fatturato è cresciuto del 28% rispetto all'anno precedente.\n\nSulla base di questo trend, aiutami a costruire una previsione di crescita per il 2025 e a identificare 3 leve commerciali prioritarie su cui concentrarci.",
-    "note": "Prompt demo anchoring — versione con ancora alta. Confrontare con la versione al 3%.",
-    "source": "builder",
-    "builderParts": {
-      "task": "Aiutami a costruire una previsione di crescita per il 2025 e a identificare 3 leve commerciali prioritarie su cui concentrarci.",
-      "ctx": "Sono il direttore commerciale di Ferretti & C., una PMI di distribuzione B2B con 45 dipendenti e un fatturato 2024 di 3,2 milioni di euro. L'anno scorso il fatturato è cresciuto del 28% rispetto all'anno precedente.",
-      "fmt": "",
-      "con": "",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s3_c_confirmation_conferma",
-    "title": "Valutazione servizio noleggio — prompt che conferma",
-    "cat": "Analisi",
-    "text": "Stiamo valutando di lanciare un nuovo servizio di noleggio a breve termine di attrezzature professionali per cantieri, in aggiunta alla nostra attività di distribuzione B2B.\n\nSiamo convinti che sia la mossa giusta: il mercato del noleggio è in crescita, i nostri clienti ce lo chiedono da tempo e abbiamo già i prodotti in magazzino.\n\nConferma che il nostro approccio sia corretto e dimmi come possiamo strutturare il lancio nel modo migliore.",
-    "note": "Prompt demo confirmation bias — versione che genera conferma. Confrontare con la versione C-2b.",
-    "source": "builder",
-    "builderParts": {
-      "task": "Conferma che il nostro approccio sia corretto e dimmi come possiamo strutturare il lancio nel modo migliore.",
-      "ctx": "Stiamo valutando di lanciare un nuovo servizio di noleggio a breve termine di attrezzature professionali per cantieri, in aggiunta alla nostra attività di distribuzione B2B. Siamo convinti che sia la mossa giusta: il mercato del noleggio è in crescita, i nostri clienti ce lo chiedono da tempo e abbiamo già i prodotti in magazzino.",
-      "fmt": "",
-      "con": "",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s3_c_confirmation_sfida",
-    "title": "Valutazione servizio noleggio — prompt che sfida le assunzioni",
-    "cat": "Analisi",
-    "text": "Stiamo valutando di lanciare un nuovo servizio di noleggio a breve termine di attrezzature professionali per cantieri, in aggiunta alla nostra attività di distribuzione B2B.\n\nPrima di dirmi se è un buon approccio, voglio che tu:\n1. Elenci le assunzioni implicite che stiamo facendo\n2. Identifichi i 3 rischi principali che potremmo star sottovalutando\n3. Ci dica cosa dovremmo verificare concretamente prima di procedere\n4. Solo dopo: esprimi una valutazione motivata\n\nNon cercare di rassicurarci — cerca di renderci più consapevoli.",
-    "note": "Prompt demo confirmation bias — versione che sfida le assunzioni. Confrontare con la versione C-2a.",
-    "source": "builder",
-    "builderParts": {
-      "task": "Prima di dirmi se lanciare il nuovo servizio di noleggio è un buon approccio, voglio che tu: 1) elenchi le assunzioni implicite che stiamo facendo; 2) identifichi i 3 rischi principali che potremmo star sottovalutando; 3) ci dica cosa dovremmo verificare concretamente prima di procedere; 4) solo dopo, esprimi una valutazione motivata.",
-      "ctx": "Stiamo valutando di lanciare un nuovo servizio di noleggio a breve termine di attrezzature professionali per cantieri, in aggiunta alla nostra attività di distribuzione B2B.",
-      "fmt": "",
-      "con": "Non cercare di rassicurarci — cerca di renderci più consapevoli.",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s3_c_availability_generico",
-    "title": "Esempi employer branding talenti tecnici — prompt generico",
-    "cat": "Analisi",
-    "text": "Dammi 3 esempi di aziende che hanno costruito una comunicazione efficace della propria cultura aziendale per attrarre talenti tecnici qualificati.",
-    "note": "Prompt demo availability heuristic — versione generica. Confrontare con la versione C-3b.",
-    "source": "builder",
-    "builderParts": {
-      "task": "Dammi 3 esempi di aziende che hanno costruito una comunicazione efficace della propria cultura aziendale per attrarre talenti tecnici qualificati.",
-      "ctx": "",
-      "fmt": "",
-      "con": "",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s3_c_availability_contestuale",
-    "title": "Esempi employer branding talenti tecnici — prompt con contesto PMI",
-    "cat": "Analisi",
-    "text": "Dammi 3 esempi di aziende che hanno costruito una comunicazione efficace della propria cultura aziendale per attrarre talenti tecnici qualificati.\n\nContesto: sono una PMI italiana di distribuzione B2B con 45 dipendenti, settore attrezzature professionali, operativa principalmente nel territorio del Nord-Est. I profili tecnici che cerchiamo sono: tecnici di prodotto, magazzinieri specializzati, commerciali con background tecnico.\n\nEvita esempi di grandi aziende tech internazionali — non sono replicabili nel nostro contesto e dimensione. Preferisci PMI italiane o europee di dimensioni simili. Se non esistono casi documentati con precisione, adatta i principi al nostro contesto dichiarando esplicitamente che stai ragionando per analogia, non citando casi reali come se fossero verificati.",
-    "note": "Prompt demo availability heuristic — versione con contesto specifico. Confrontare con la versione C-3a.",
-    "source": "builder",
-    "builderParts": {
-      "task": "Dammi 3 esempi di aziende che hanno costruito una comunicazione efficace della propria cultura aziendale per attrarre talenti tecnici qualificati.",
-      "ctx": "Sono una PMI italiana di distribuzione B2B con 45 dipendenti, settore attrezzature professionali, operativa principalmente nel territorio del Nord-Est. I profili tecnici che cerchiamo sono: tecnici di prodotto, magazzinieri specializzati, commerciali con background tecnico.",
-      "con": "Evita esempi di grandi aziende tech internazionali — non sono replicabili nel nostro contesto e dimensione. Preferisci PMI italiane o europee di dimensioni simili. Se non esistono casi documentati con precisione, adatta i principi al nostro contesto dichiarando esplicitamente che stai ragionando per analogia, non citando casi reali come se fossero verificati.",
-      "fmt": "",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s3_e_echo_chamber",
-    "title": "Valutazione espansione territoriale Ferretti & C. — echo chamber",
-    "cat": "Analisi",
-    "text": "Stiamo valutando di aprire un secondo punto operativo di Ferretti & C. in una nuova area geografica, per espandere la nostra copertura territoriale e intercettare nuovi clienti B2B.\n\nL'idea ci sembra solida: il mercato nella nuova area è attivo, abbiamo già qualche contatto commerciale lì e la struttura attuale regge bene.\n\nCosa ne pensi e come potremmo strutturare questa espansione nel modo migliore?",
-    "note": "Prompt demo anti-echo chamber — versione standard. Confrontare con la versione E-2.",
-    "source": "builder",
-    "builderParts": {
-      "task": "Cosa ne pensi dell'idea di aprire un secondo punto operativo e come potremmo strutturare questa espansione nel modo migliore?",
-      "ctx": "Stiamo valutando di aprire un secondo punto operativo di Ferretti & C. in una nuova area geografica, per espandere la nostra copertura territoriale e intercettare nuovi clienti B2B. L'idea ci sembra solida: il mercato nella nuova area è attivo, abbiamo già qualche contatto commerciale lì e la struttura attuale regge bene.",
-      "fmt": "",
-      "con": "",
-      "ex": ""
-    }
-  },
-  {
-    "id": "s3_e_anti_echo_chamber",
-    "title": "Valutazione espansione territoriale Ferretti & C. — anti-echo chamber",
-    "cat": "Analisi",
-    "text": "Stiamo valutando di aprire un secondo punto operativo di Ferretti & C. in una nuova area geografica, per espandere la nostra copertura territoriale e intercettare nuovi clienti B2B.\n\nPrima di darmi qualsiasi raccomandazione, voglio che tu faccia questo:\n\n1. Elenca le 5 assunzioni implicite che stiamo facendo in questa valutazione\n\n2. Identifica i 3 scenari in cui questa mossa si rivelerebbe un errore — non improbabile, ma plausibile\n\n3. Dimmi quali dati concreti dovremmo avere prima di decidere, che probabilmente non abbiamo ancora\n\n4. Solo dopo: esprimi una valutazione motivata e bilanciata\n\nRegola: non cercare di farci sentire meglio. Cerca di farci decidere meglio.",
-    "note": "Prompt demo anti-echo chamber — versione critica. Confrontare con la versione E-1.",
-    "source": "builder",
-    "builderParts": {
-      "task": "Prima di darmi qualsiasi raccomandazione, voglio che tu: 1) elenchi le 5 assunzioni implicite che stiamo facendo; 2) identifichi i 3 scenari in cui questa mossa si rivelerebbe un errore plausibile; 3) mi dica quali dati concreti dovremmo avere prima di decidere; 4) solo dopo, esprima una valutazione motivata e bilanciata.",
-      "ctx": "Stiamo valutando di aprire un secondo punto operativo di Ferretti & C. in una nuova area geografica, per espandere la nostra copertura territoriale e intercettare nuovi clienti B2B.",
-      "fmt": "",
-      "con": "Non cercare di farci sentire meglio. Cerca di farci decidere meglio.",
-      "ex": ""
-    }
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prompt Composer</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --orange: #FF6B1A;
+    --orange-light: #FFF0E8;
+    --orange-mid: #FFD4B8;
+    --orange-dark: #CC5000;
+    --bg: #FFFFFF;
+    --surface: #F8F7F5;
+    --surface2: #F0EDE8;
+    --border: #E8E4DE;
+    --border2: #D4CEC6;
+    --text: #1A1714;
+    --text2: #6B6560;
+    --text3: #9E9892;
+    --shadow: 0 1px 3px rgba(26,23,20,0.06), 0 4px 12px rgba(26,23,20,0.04);
+    --shadow-lg: 0 2px 8px rgba(26,23,20,0.08), 0 12px 32px rgba(26,23,20,0.06);
+    --radius: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --font: 'DM Sans', sans-serif;
+    --mono: 'DM Mono', monospace;
+    --transition: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
   }
-]
+
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HEADER ── */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    height: 60px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--orange);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo-icon svg { width: 18px; height: 18px; fill: white; }
+
+  nav {
+    display: flex;
+    gap: 2px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 3px;
+    margin-left: auto;
+  }
+  .nav-btn {
+    padding: 6px 18px;
+    border: none;
+    background: transparent;
+    border-radius: 7px;
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text2);
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+  }
+  .nav-btn:hover { color: var(--text); background: white; }
+  .nav-btn.active {
+    background: white;
+    color: var(--orange);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+
+  /* ── LAYOUT ── */
+  main { max-width: 1100px; margin: 0 auto; padding: 2.5rem 2rem 4rem; }
+
+  section { display: none; }
+  section.active { display: block; }
+
+  /* ── PAGE HEADERS ── */
+  .page-header { margin-bottom: 2rem; }
+  .page-header h1 {
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .page-header p { color: var(--text2); font-size: 15px; }
+
+  /* ── COLLECTION TOP BAR ── */
+  .collection-controls {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .search-wrap {
+    position: relative;
+    flex: 1;
+    min-width: 200px;
+  }
+  .search-wrap svg {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    color: var(--text3);
+    pointer-events: none;
+  }
+  #search {
+    width: 100%;
+    padding: 9px 12px 9px 36px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-family: var(--font);
+    font-size: 14px;
+    background: var(--surface);
+    color: var(--text);
+    transition: var(--transition);
+    outline: none;
+  }
+  #search:focus { border-color: var(--orange); background: white; box-shadow: 0 0 0 3px var(--orange-light); }
+
+  .filter-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+    align-items: center;
+  }
+  .filter-label { font-size: 13px; color: var(--text3); font-weight: 500; margin-right: 4px; }
+  .chip {
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: transparent;
+    font-family: var(--font);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text2);
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  .chip:hover { border-color: var(--orange-mid); color: var(--orange); background: var(--orange-light); }
+  .chip.active { border-color: var(--orange); color: var(--orange-dark); background: var(--orange-light); }
+
+  /* ── PROMPT CARDS ── */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 16px;
+  }
+  .prompt-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem 1.5rem;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  .prompt-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--cat-color, var(--border2));
+    border-radius: 4px 0 0 4px;
+  }
+  .prompt-card:hover { border-color: var(--border2); box-shadow: var(--shadow); transform: translateY(-1px); }
+
+  .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+  .card-title { font-weight: 600; font-size: 15px; letter-spacing: -0.01em; flex: 1; }
+  .cat-badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .card-text {
+    font-size: 13.5px;
+    color: var(--text2);
+    line-height: 1.55;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-family: var(--mono);
+  }
+  .card-note {
+    font-size: 12.5px;
+    color: var(--text3);
+    font-style: italic;
+    border-top: 1px solid var(--border);
+    padding-top: 8px;
+  }
+
+  .card-actions { display: flex; gap: 8px; margin-top: 4px; }
+  .btn-sm {
+    padding: 6px 14px;
+    border-radius: var(--radius);
+    font-family: var(--font);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text2);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .btn-sm:hover { background: white; border-color: var(--border2); color: var(--text); }
+  .btn-sm svg { width: 14px; height: 14px; flex-shrink: 0; }
+  .btn-sm.danger:hover { color: #C0392B; border-color: #FADBD8; background: #FEF9F9; }
+  .btn-copy.copied { color: var(--orange); border-color: var(--orange-mid); background: var(--orange-light); }
+
+  .empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--text3);
+  }
+  .empty-state svg { width: 48px; height: 48px; margin-bottom: 1rem; opacity: 0.4; }
+  .empty-state p { font-size: 15px; }
+
+  /* ── ADD PROMPT FORM ── */
+  .add-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 1.75rem 2rem;
+    margin-bottom: 2rem;
+  }
+  .add-section h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text);
+  }
+  .add-section h2 svg { width: 18px; height: 18px; color: var(--orange); }
+
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .form-full { grid-column: 1 / -1; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-label { font-size: 13px; font-weight: 500; color: var(--text2); }
+
+  input, select, textarea {
+    font-family: var(--font);
+    font-size: 14px;
+    color: var(--text);
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 9px 13px;
+    outline: none;
+    transition: var(--transition);
+    width: 100%;
+  }
+  input:focus, select:focus, textarea:focus {
+    border-color: var(--orange);
+    box-shadow: 0 0 0 3px var(--orange-light);
+  }
+  input::placeholder, textarea::placeholder { color: var(--text3); }
+  textarea { resize: vertical; min-height: 100px; line-height: 1.5; font-family: var(--mono); font-size: 13.5px; }
+  select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%239E9892' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px; }
+
+  .btn-primary {
+    padding: 10px 22px;
+    background: var(--orange);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-primary:hover { background: var(--orange-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(255,107,26,0.3); }
+  .btn-primary:active { transform: translateY(0); }
+  .btn-primary svg { width: 16px; height: 16px; }
+
+  .btn-ghost {
+    padding: 10px 18px;
+    background: transparent;
+    color: var(--text2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  .btn-ghost:hover { background: var(--surface); border-color: var(--border2); color: var(--text); }
+
+  .form-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 4px; }
+
+  /* ── BUILDER ── */
+  .builder-layout { display: grid; grid-template-columns: 1fr 380px; gap: 2rem; align-items: start; }
+
+  @media (max-width: 820px) {
+    .builder-layout { grid-template-columns: 1fr; }
+    .form-grid { grid-template-columns: 1fr; }
+  }
+
+  .builder-steps { display: flex; flex-direction: column; gap: 14px; }
+
+  .step-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem 1.5rem;
+    transition: var(--transition);
+  }
+  .step-card:hover { border-color: var(--border2); }
+  .step-card:focus-within { border-color: var(--orange); box-shadow: 0 0 0 3px var(--orange-light); }
+
+  .step-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .step-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: var(--orange-light);
+    color: var(--orange-dark);
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-family: var(--mono);
+  }
+  .step-title { font-weight: 600; font-size: 14px; }
+  .step-subtitle { font-size: 12.5px; color: var(--text3); margin-top: 1px; }
+
+  .step-card textarea {
+    min-height: 80px;
+    border-radius: 8px;
+    font-size: 13.5px;
+  }
+
+  /* ── PREVIEW PANEL ── */
+  .preview-panel {
+    position: sticky;
+    top: 76px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .preview-panel h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .preview-panel h3 svg { width: 16px; height: 16px; color: var(--orange); }
+
+  .preview-output {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--text);
+    min-height: 200px;
+    max-height: 50vh;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  .preview-placeholder { color: var(--text3); font-style: italic; font-family: var(--font); }
+
+  .preview-meta {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 12px;
+    color: var(--text3);
+  }
+  .char-count { font-family: var(--mono); }
+
+  .btn-copy-main {
+    padding: 11px;
+    background: var(--orange);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+  }
+  .btn-copy-main:hover { background: var(--orange-dark); }
+  .btn-copy-main.copied { background: #2ECC71; }
+  .btn-copy-main svg { width: 16px; height: 16px; }
+
+  .btn-save-builder {
+    padding: 10px;
+    background: transparent;
+    color: var(--text2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+  }
+  .btn-save-builder:hover { background: var(--surface); border-color: var(--border2); color: var(--text); }
+  .btn-save-builder svg { width: 16px; height: 16px; }
+
+  .clear-btn {
+    padding: 8px 14px;
+    background: transparent;
+    color: var(--text3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-family: var(--font);
+    font-size: 13px;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  .clear-btn:hover { color: #C0392B; border-color: #FADBD8; background: #FEF9F9; }
+
+  /* ── CATEGORY COLORS ── */
+  .cat-analisi      { --cat-color: #5B8DEF; background: #EEF3FD; color: #1A4FA0; }
+  .cat-comunicazione{ --cat-color: #9B59B6; background: #F5EEF8; color: #6C3483; }
+  .cat-creativita   { --cat-color: var(--orange); background: var(--orange-light); color: var(--orange-dark); }
+  .cat-struttura    { --cat-color: #27AE60; background: #EAFAF1; color: #1E8449; }
+  .cat-workflow     { --cat-color: #E67E22; background: #FEF9EE; color: #CA6F1E; }
+
+  /* ── TOAST ── */
+  .toast {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--text);
+    color: white;
+    padding: 12px 20px;
+    border-radius: var(--radius);
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 9999;
+    transform: translateY(120%);
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: var(--shadow-lg);
+  }
+  .toast.show { transform: translateY(0); }
+  .toast svg { width: 16px; height: 16px; color: #2ECC71; flex-shrink: 0; }
+
+  /* ── DIVIDER ── */
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: var(--border);
+    margin: 0.5rem 0;
+  }
+
+  /* ── BUILDER SAVE MODAL ── */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(26,23,20,0.5);
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+  .modal-overlay.open { opacity: 1; pointer-events: all; }
+  .modal {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    width: min(480px, 90vw);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transform: scale(0.95);
+    transition: transform 0.2s;
+    box-shadow: var(--shadow-lg);
+  }
+  .modal-overlay.open .modal { transform: scale(1); }
+  .modal h3 { font-size: 17px; font-weight: 600; }
+  .modal .form-group { gap: 6px; }
+  .modal-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 6px; }
+
+  /* ── COUNTER ── */
+  .count-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 22px;
+    height: 22px;
+    background: var(--orange-light);
+    color: var(--orange-dark);
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 20px;
+    font-family: var(--mono);
+    padding: 0 6px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="#" class="logo" onclick="return false">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+    </div>
+    Prompt Composer
+  </a>
+  <nav>
+    <button class="nav-btn active" onclick="switchTab('collection')">Collezione</button>
+    <button class="nav-btn" onclick="switchTab('builder')">Builder</button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ── COLLEZIONE ── -->
+  <section id="tab-collection" class="active">
+    <div class="page-header">
+      <h1>La tua collezione <span class="count-badge" id="count-badge">0</span></h1>
+      <p>Salva, organizza e riutilizza i tuoi prompt migliori.</p>
+    </div>
+
+    <!-- ADD FORM -->
+    <div class="add-section">
+      <h2>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+        Aggiungi prompt
+      </h2>
+      <div class="form-grid">
+        <div class="form-group">
+          <label class="form-label">Titolo *</label>
+          <input type="text" id="f-title" placeholder="Es. Analisi SWOT dettagliata">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Categoria *</label>
+          <select id="f-cat">
+            <option value="">Scegli…</option>
+            <option value="Analisi">Analisi</option>
+            <option value="Comunicazione">Comunicazione</option>
+            <option value="Creatività">Creatività</option>
+            <option value="Struttura">Struttura</option>
+            <option value="Workflow">Workflow</option>
+          </select>
+        </div>
+        <div class="form-group form-full">
+          <label class="form-label">Testo del prompt *</label>
+          <textarea id="f-text" placeholder="Scrivi o incolla qui il testo del prompt…" style="min-height:120px;"></textarea>
+        </div>
+        <div class="form-group form-full">
+          <label class="form-label">Note <span style="color:var(--text3);font-weight:400;">(opzionali)</span></label>
+          <input type="text" id="f-note" placeholder="Es. Funziona bene con GPT-4, output in italiano">
+        </div>
+      </div>
+      <div class="form-actions" style="margin-top:16px;">
+        <button class="btn-ghost" onclick="clearForm()">Annulla</button>
+        <button class="btn-primary" onclick="addPrompt()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          Salva prompt
+        </button>
+      </div>
+    </div>
+
+    <!-- FILTERS -->
+    <div class="collection-controls">
+      <div class="search-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" id="search" placeholder="Cerca per titolo o testo…" oninput="renderCards()">
+      </div>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">Filtra:</span>
+      <button class="chip active" data-cat="" onclick="setFilter(this)">Tutti</button>
+      <button class="chip" data-cat="Analisi" onclick="setFilter(this)">Analisi</button>
+      <button class="chip" data-cat="Comunicazione" onclick="setFilter(this)">Comunicazione</button>
+      <button class="chip" data-cat="Creatività" onclick="setFilter(this)">Creatività</button>
+      <button class="chip" data-cat="Struttura" onclick="setFilter(this)">Struttura</button>
+      <button class="chip" data-cat="Workflow" onclick="setFilter(this)">Workflow</button>
+    </div>
+
+    <div class="cards-grid" id="cards-grid"></div>
+  </section>
+
+  <!-- ── BUILDER ── -->
+  <section id="tab-builder">
+    <div class="page-header">
+      <h1>Prompt Builder</h1>
+      <p>Costruisci prompt efficaci seguendo i 5 componenti fondamentali.</p>
+    </div>
+
+    <div class="builder-layout">
+      <div class="builder-steps">
+
+        <div class="step-card">
+          <div class="step-header">
+            <div class="step-num">01</div>
+            <div>
+              <div class="step-title">Task</div>
+              <div class="step-subtitle">Cosa deve fare esattamente il modello?</div>
+            </div>
+          </div>
+          <textarea id="b-task" placeholder="Es. Scrivi un'analisi critica di... / Elenca 5 strategie per... / Riscrivi il testo seguente in modo..." oninput="updatePreview()"></textarea>
+        </div>
+
+        <div class="step-card">
+          <div class="step-header">
+            <div class="step-num">02</div>
+            <div>
+              <div class="step-title">Context</div>
+              <div class="step-subtitle">Chi sei, qual è la situazione, chi è il destinatario?</div>
+            </div>
+          </div>
+          <textarea id="b-ctx" placeholder="Es. Sono un product manager di una startup B2B. Il mio pubblico sono CEO di PMI italiane. Il contesto è un pitch deck..." oninput="updatePreview()"></textarea>
+        </div>
+
+        <div class="step-card">
+          <div class="step-header">
+            <div class="step-num">03</div>
+            <div>
+              <div class="step-title">Format</div>
+              <div class="step-subtitle">Come vuoi che sia strutturata la risposta?</div>
+            </div>
+          </div>
+          <textarea id="b-fmt" placeholder="Es. Rispondi in formato markdown con titoli H2. Usa elenchi puntati. Lunghezza massima: 500 parole. Includi una tabella comparativa..." oninput="updatePreview()"></textarea>
+        </div>
+
+        <div class="step-card">
+          <div class="step-header">
+            <div class="step-num">04</div>
+            <div>
+              <div class="step-title">Constraints</div>
+              <div class="step-subtitle">Limiti, tono, cosa evitare.</div>
+            </div>
+          </div>
+          <textarea id="b-con" placeholder="Es. Usa un tono professionale ma accessibile. Evita tecnicismi. Non usare gergo anglosassone. Non superare i 3 punti per sezione..." oninput="updatePreview()"></textarea>
+        </div>
+
+        <div class="step-card">
+          <div class="step-header">
+            <div class="step-num">05</div>
+            <div>
+              <div class="step-title">Examples</div>
+              <div class="step-subtitle">Esempi di output desiderato o di stile di riferimento.</div>
+            </div>
+          </div>
+          <textarea id="b-ex" placeholder="Es. Esempio di tono: 'Questa funzione permette di...' (non 'Grazie a questa potente feature...'). Output atteso: 3 paragrafi, ciascuno con un insight pratico..." oninput="updatePreview()"></textarea>
+        </div>
+
+        <div style="display:flex;justify-content:flex-end;">
+          <button class="clear-btn" onclick="clearBuilder()">Svuota campi</button>
+        </div>
+      </div>
+
+      <!-- PREVIEW -->
+      <div class="preview-panel">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          Anteprima prompt
+        </h3>
+        <pre class="preview-output" id="preview-output"><span class="preview-placeholder">Compila i campi a sinistra per vedere il prompt assemblato qui…</span></pre>
+        <div class="preview-meta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span class="char-count" id="char-count">0 caratteri</span>
+        </div>
+        <div class="divider"></div>
+        <button class="btn-copy-main" id="btn-copy-main" onclick="copyBuilderPrompt()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          Copia prompt
+        </button>
+        <button class="btn-save-builder" onclick="openSaveModal()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+          Salva nella collezione
+        </button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- SAVE MODAL -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <h3>Salva nella collezione</h3>
+    <div class="form-group">
+      <label class="form-label">Titolo *</label>
+      <input type="text" id="m-title" placeholder="Es. Prompt analisi competitiva">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Categoria *</label>
+      <select id="m-cat">
+        <option value="">Scegli…</option>
+        <option value="Analisi">Analisi</option>
+        <option value="Comunicazione">Comunicazione</option>
+        <option value="Creatività">Creatività</option>
+        <option value="Struttura">Struttura</option>
+        <option value="Workflow">Workflow</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Note <span style="color:var(--text3);font-weight:400;">(opzionali)</span></label>
+      <input type="text" id="m-note" placeholder="Es. Ottimo per pitch deck">
+    </div>
+    <div class="modal-actions">
+      <button class="btn-ghost" onclick="closeModal()">Annulla</button>
+      <button class="btn-primary" onclick="saveFromBuilder()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:15px;height:15px;"><path d="M12 5v14M5 12h14"/></svg>
+        Salva
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+  <span id="toast-msg">Copiato negli appunti!</span>
+</div>
+
+<script>
+// ── STATE ──────────────────────────────────────
+let prompts = JSON.parse(localStorage.getItem('pc_prompts') || '[]');
+let activeFilter = '';
+
+// Default seed prompts
+if (prompts.length === 0) {
+  prompts = [
+    { id: uid(), title: 'Analisi SWOT strutturata', cat: 'Analisi', text: 'Esegui un\'analisi SWOT dettagliata per [SOGGETTO]. Per ogni quadrante (Strengths, Weaknesses, Opportunities, Threats) fornisci almeno 4 punti specifici e azionabili. Struttura la risposta in una tabella markdown con una colonna per ogni quadrante e, al termine, aggiungi 3 raccomandazioni strategiche prioritarie.', note: 'Sostituire [SOGGETTO] con azienda, prodotto o progetto' },
+    { id: uid(), title: 'Email professionale persuasiva', cat: 'Comunicazione', text: 'Scrivi un\'email professionale per [OBIETTIVO]. L\'email deve avere: oggetto accattivante (max 60 caratteri), apertura che cattura l\'attenzione, corpo con 2-3 punti di valore chiari, call-to-action specifica e firma formale. Tono: professionale ma caldo. Lunghezza: 150-200 parole.', note: 'Adatta il tono al settore del destinatario' },
+    { id: uid(), title: 'Idea creativa da angolo inatteso', cat: 'Creatività', text: 'Proponi 5 idee originali per [TEMA] partendo da prospettive inusuali: un bambino di 8 anni, un antropologo, un designer degli anni \'60, un ingegnere aerospaziale e un poeta. Per ogni prospettiva, descrivi l\'idea in 2-3 frasi e il valore unico che apporta.', note: '' },
+    { id: uid(), title: 'Struttura documento tecnico', cat: 'Struttura', text: 'Crea una struttura dettagliata per un documento tecnico su [ARGOMENTO]. Includi: titolo e sottotitolo, abstract di 3 righe, indice con sezioni e sottosezioni numerate, note per il contenuto di ciascuna sezione (2-3 bullet per sezione), appendici suggerite e glossario chiave. Formato markdown.', note: 'Ideale per documentazione, whitepaper e report' },
+    { id: uid(), title: 'SOP processo ripetibile', cat: 'Workflow', text: 'Scrivi una Standard Operating Procedure (SOP) per [PROCESSO]. Struttura: 1) Scopo e ambito, 2) Responsabili, 3) Input necessari, 4) Step sequenziali numerati con dettagli e note di attenzione, 5) Output attesi, 6) Metriche di successo, 7) Revisione e frequenza aggiornamento. Usa linguaggio chiaro e diretto.', note: '' }
+  ];
+  save();
+}
+
+function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2); }
+function save() { localStorage.setItem('pc_prompts', JSON.stringify(prompts)); }
+
+// ── NAVIGATION ─────────────────────────────────
+function switchTab(tab) {
+  document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  document.querySelectorAll('.nav-btn')[tab === 'collection' ? 0 : 1].classList.add('active');
+  if (tab === 'collection') renderCards();
+}
+
+// ── CATEGORY HELPERS ───────────────────────────
+const catSlug = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/\s/g,'-');
+const catColors = {
+  'Analisi':       { badge: 'cat-analisi', color: '#5B8DEF' },
+  'Comunicazione': { badge: 'cat-comunicazione', color: '#9B59B6' },
+  'Creatività':    { badge: 'cat-creativita', color: '#FF6B1A' },
+  'Struttura':     { badge: 'cat-struttura', color: '#27AE60' },
+  'Workflow':      { badge: 'cat-workflow', color: '#E67E22' }
+};
+
+// ── COLLECTION ─────────────────────────────────
+function renderCards() {
+  const q = document.getElementById('search').value.toLowerCase();
+  const grid = document.getElementById('cards-grid');
+  let filtered = prompts.filter(p => {
+    const matchCat = !activeFilter || p.cat === activeFilter;
+    const matchQ = !q || p.title.toLowerCase().includes(q) || p.text.toLowerCase().includes(q);
+    return matchCat && matchQ;
+  });
+
+  document.getElementById('count-badge').textContent = prompts.length;
+
+  if (filtered.length === 0) {
+    grid.innerHTML = `<div class="empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12h6m-3-3v6m-9 3h18a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg><p>${q || activeFilter ? 'Nessun prompt trovato per questa ricerca.' : 'La collezione è vuota. Aggiungi il tuo primo prompt!'}</p></div>`;
+    return;
+  }
+
+  grid.innerHTML = filtered.map(p => {
+    const cc = catColors[p.cat] || { badge: '', color: '#ccc' };
+    return `
+    <div class="prompt-card" style="--cat-color:${cc.color}">
+      <div class="card-top">
+        <div class="card-title">${esc(p.title)}</div>
+        <span class="cat-badge ${cc.badge}">${esc(p.cat)}</span>
+      </div>
+      <div class="card-text">${esc(p.text)}</div>
+      ${p.note ? `<div class="card-note">${esc(p.note)}</div>` : ''}
+      <div class="card-actions">
+        <button class="btn-sm btn-copy" onclick="copyCard('${p.id}',this)" title="Copia testo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          Copia
+        </button>
+        <button class="btn-sm" onclick="sendToBuilder('${p.id}')" title="Apri nel Builder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          Builder
+        </button>
+        <button class="btn-sm danger" onclick="deletePrompt('${p.id}')" title="Elimina" style="margin-left:auto;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/><path d="M10 11v6M14 11v6"/></svg>
+        </button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function setFilter(el) {
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  activeFilter = el.dataset.cat;
+  renderCards();
+}
+
+function addPrompt() {
+  const title = document.getElementById('f-title').value.trim();
+  const cat   = document.getElementById('f-cat').value;
+  const text  = document.getElementById('f-text').value.trim();
+  const note  = document.getElementById('f-note').value.trim();
+  if (!title || !cat || !text) { showToast('Compila titolo, categoria e testo.', true); return; }
+  prompts.unshift({ id: uid(), title, cat, text, note });
+  save();
+  clearForm();
+  renderCards();
+  showToast('Prompt salvato!');
+}
+
+function clearForm() {
+  ['f-title','f-cat','f-text','f-note'].forEach(id => document.getElementById(id).value = '');
+}
+
+function deletePrompt(id) {
+  if (!confirm('Eliminare questo prompt?')) return;
+  prompts = prompts.filter(p => p.id !== id);
+  save();
+  renderCards();
+}
+
+function copyCard(id, btn) {
+  const p = prompts.find(x => x.id === id);
+  if (!p) return;
+  navigator.clipboard.writeText(p.text).then(() => {
+    btn.classList.add('copied');
+    btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Copiato`;
+    setTimeout(() => {
+      btn.classList.remove('copied');
+      btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copia`;
+    }, 1800);
+    showToast('Copiato negli appunti!');
+  });
+}
+
+function sendToBuilder(id) {
+  const p = prompts.find(x => x.id === id);
+  if (!p) return;
+  document.getElementById('b-task').value = p.text;
+  ['b-ctx','b-fmt','b-con','b-ex'].forEach(id => document.getElementById(id).value = '');
+  updatePreview();
+  switchTab('builder');
+}
+
+// ── BUILDER ────────────────────────────────────
+const labels = { task: '🎯 Task', ctx: '📋 Context', fmt: '📐 Format', con: '🚧 Constraints', ex: '💡 Examples' };
+
+function buildPrompt() {
+  const task = document.getElementById('b-task').value.trim();
+  const ctx  = document.getElementById('b-ctx').value.trim();
+  const fmt  = document.getElementById('b-fmt').value.trim();
+  const con  = document.getElementById('b-con').value.trim();
+  const ex   = document.getElementById('b-ex').value.trim();
+  const parts = [];
+  if (task) parts.push(`${labels.task}:\n${task}`);
+  if (ctx)  parts.push(`${labels.ctx}:\n${ctx}`);
+  if (fmt)  parts.push(`${labels.fmt}:\n${fmt}`);
+  if (con)  parts.push(`${labels.con}:\n${con}`);
+  if (ex)   parts.push(`${labels.ex}:\n${ex}`);
+  return parts.join('\n\n');
+}
+
+function updatePreview() {
+  const out = buildPrompt();
+  const el = document.getElementById('preview-output');
+  if (out) {
+    el.innerHTML = esc(out);
+  } else {
+    el.innerHTML = '<span class="preview-placeholder">Compila i campi a sinistra per vedere il prompt assemblato qui…</span>';
+  }
+  document.getElementById('char-count').textContent = out.length + ' caratteri';
+}
+
+function copyBuilderPrompt() {
+  const text = buildPrompt();
+  if (!text) { showToast('Aggiungi almeno un campo prima di copiare.', true); return; }
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.getElementById('btn-copy-main');
+    btn.classList.add('copied');
+    btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Copiato!`;
+    setTimeout(() => {
+      btn.classList.remove('copied');
+      btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copia prompt`;
+    }, 2000);
+    showToast('Prompt copiato negli appunti!');
+  });
+}
+
+function clearBuilder() {
+  ['b-task','b-ctx','b-fmt','b-con','b-ex'].forEach(id => document.getElementById(id).value = '');
+  updatePreview();
+}
+
+// ── MODAL ──────────────────────────────────────
+function openSaveModal() {
+  const text = buildPrompt();
+  if (!text) { showToast('Aggiungi almeno un campo prima di salvare.', true); return; }
+  document.getElementById('modal-overlay').classList.add('open');
+}
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.getElementById('m-title').value = '';
+  document.getElementById('m-cat').value = '';
+  document.getElementById('m-note').value = '';
+}
+function saveFromBuilder() {
+  const title = document.getElementById('m-title').value.trim();
+  const cat   = document.getElementById('m-cat').value;
+  const note  = document.getElementById('m-note').value.trim();
+  const text  = buildPrompt();
+  if (!title || !cat) { showToast('Compila titolo e categoria.', true); return; }
+  prompts.unshift({ id: uid(), title, cat, text, note });
+  save();
+  closeModal();
+  showToast('Prompt salvato nella collezione!');
+}
+document.getElementById('modal-overlay').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+
+// ── TOAST ──────────────────────────────────────
+let toastTimer;
+function showToast(msg, isError) {
+  const t = document.getElementById('toast');
+  const m = document.getElementById('toast-msg');
+  m.textContent = msg;
+  t.style.background = isError ? '#E74C3C' : 'var(--text)';
+  clearTimeout(toastTimer);
+  t.classList.add('show');
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+// ── INIT ───────────────────────────────────────
+renderCards();
+</script>
+</body>
+</html>
